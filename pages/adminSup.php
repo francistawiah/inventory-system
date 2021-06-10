@@ -1,7 +1,7 @@
 <?php
 
   
-  $SupDB = mysqli_connect('localhost', 'root', '', 'inventory');
+ include('../dist/includes/dbcon.php');
 
 
   $handle_errors = array();
@@ -31,13 +31,13 @@
   else
   {
     $query ="SELECT * FROM `admin` WHERE username = '$admin_sup_name'";
-    $Result = $SupDB->query($query);
+    $Result = $con->query($query);
 
     if($Result->num_rows == 1)
     {
       $Suppass = md5($admin_sup_password);
       $MainSql = "SELECT * FROM `admin` WHERE username = '$admin_sup_name' AND password = '$Suppass'";
-      $MainResult = $SupDB->query($MainSql);
+      $MainResult = $con->query($MainSql);
 
       if($MainResult->num_rows == 1)
       {

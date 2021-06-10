@@ -1,5 +1,5 @@
-
-<?php include 'header.php';?>
+<?php include 'header.php'; ?>
+ 
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
@@ -16,23 +16,23 @@
 
 					<?php 
 					include 'dbcon.php';
-						$query1=mysqli_query($con,"select * from branch ORDER BY branch_name")or die(mysqli_error($con));
-						while ($row=mysqli_fetch_array($query1)){
-						$id=$row['branch_id'];?>
-						<a href  = "page_reports.php?id=<?php echo $row['branch_id'];?>">
-						<div class = "col-md-6 col-6-12 col-6">
-							
-							<div class = "panel panel-success">
-								<div class = "panel-heading">
-									<i class = "center fa fa-building"></i>
-								</div>
-								<div class = "panel-body">
-										<h1 class = ""><?php echo $row['branch_name'];?></h1>
+						$query1 = mysqli_query($con,"select * from branch ORDER BY branch_name")or die(mysqli_error($con));
+						while ($row = mysqli_fetch_array($query1))
+						{
+							$id = $row['branch_id'];?>
+							<a href  = "sales.php?id=<?php echo $row['branch_id'];?>">
+							<div class = "col-md-6 col-6-12 col-6">
+								
+								<div class = "panel panel-success">
+									<div class = "panel-heading">
+										<i class = "center fa fa-building"></i>
+									</div>
+									<div class = "panel-body">
+										<h1 class =""><?php echo $row['branch_name'];?></h1>
+									</div>
 								</div>
 							</div>
-							
-						</div>
-						</a>
+							</a>
 						<?php } ?>						
 				</div>
 			</div>

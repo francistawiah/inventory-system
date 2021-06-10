@@ -1,0 +1,424 @@
+[21-May-2021 21:21:16 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 21:22:33 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 21:35:03 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 21:36:17 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 21:36:21 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 21:36:21 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 21:36:21 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 21:36:33 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:36:33 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:36:33 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 21:36:33 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 21:36:33 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:36:33 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:36:33 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 21:36:33 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 21:36:54 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:36:54 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:36:54 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 21:36:54 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 21:36:54 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:36:54 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:36:54 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 21:36:54 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 21:38:52 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:38:52 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:38:52 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 21:38:52 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 21:38:52 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:38:52 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 21:38:52 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 21:38:52 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 22:18:46 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 22:19:08 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 22:19:08 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 22:19:08 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 22:19:08 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 22:19:08 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 22:19:08 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[21-May-2021 22:19:08 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 22:19:08 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[21-May-2021 22:19:25 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 14
+[21-May-2021 22:19:25 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 14
+[21-May-2021 22:19:25 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 15
+[21-May-2021 22:19:25 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 15
+[21-May-2021 22:19:25 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 14
+[21-May-2021 22:19:25 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 14
+[21-May-2021 22:19:25 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 15
+[21-May-2021 22:19:25 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 15
+[21-May-2021 22:20:01 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 15
+[21-May-2021 22:20:01 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 15
+[21-May-2021 22:20:01 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 16
+[21-May-2021 22:20:01 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 16
+[21-May-2021 22:20:01 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 15
+[21-May-2021 22:20:01 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 15
+[21-May-2021 22:20:01 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 16
+[21-May-2021 22:20:01 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 16
+[21-May-2021 22:20:15 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 22:20:28 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[21-May-2021 22:23:35 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 22:24:19 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 22:24:35 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[21-May-2021 22:40:40 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 23:42:10 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 23:42:39 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:42:39 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:42:39 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:43:17 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 14
+[21-May-2021 23:43:17 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 14
+[21-May-2021 23:43:17 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 15
+[21-May-2021 23:43:17 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 15
+[21-May-2021 23:43:57 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:43:57 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:43:57 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:44:29 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 23:45:43 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[21-May-2021 23:46:09 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[21-May-2021 23:46:15 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:46:15 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:46:15 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:46:48 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:46:48 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:46:48 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[21-May-2021 23:48:16 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[22-May-2021 07:53:06 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[22-May-2021 07:54:48 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 07:54:48 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 07:54:48 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 07:58:29 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 14
+[22-May-2021 07:58:29 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 14
+[22-May-2021 07:58:29 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 15
+[22-May-2021 07:58:29 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 15
+[22-May-2021 07:58:53 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 14
+[22-May-2021 07:58:53 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 14
+[22-May-2021 07:58:53 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 15
+[22-May-2021 07:58:53 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 15
+[22-May-2021 07:59:27 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 14
+[22-May-2021 07:59:27 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 14
+[22-May-2021 07:59:27 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 15
+[22-May-2021 07:59:27 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 15
+[22-May-2021 08:08:27 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[22-May-2021 08:08:27 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[22-May-2021 08:08:27 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[22-May-2021 08:08:27 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[22-May-2021 08:08:27 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[22-May-2021 08:08:27 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 14
+[22-May-2021 08:08:27 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[22-May-2021 08:08:27 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 15
+[22-May-2021 08:17:28 UTC] PHP Notice:  Undefined index: skin in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 105
+[22-May-2021 08:17:28 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 22
+[22-May-2021 08:17:28 Africa/Accra] PHP Notice:  Undefined index: name in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 187
+[22-May-2021 08:17:28 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 138
+[22-May-2021 08:17:28 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 292
+[22-May-2021 08:17:28 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[22-May-2021 14:12:46 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[22-May-2021 14:13:27 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[22-May-2021 14:18:12 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[22-May-2021 14:19:28 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[22-May-2021 14:19:35 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 14:19:35 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 14:19:35 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 14:43:37 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[22-May-2021 14:47:29 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 14
+[22-May-2021 14:47:29 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 14
+[22-May-2021 14:47:29 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 15
+[22-May-2021 14:47:29 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 15
+[22-May-2021 14:47:29 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 14
+[22-May-2021 14:47:29 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 14
+[22-May-2021 14:47:29 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 15
+[22-May-2021 14:47:29 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/SaleLogin.php on line 15
+[22-May-2021 14:49:16 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 14:49:16 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 14:49:16 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 14:49:16 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 14:49:16 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 14:49:16 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 14:49:16 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 291
+[22-May-2021 14:49:59 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 14
+[22-May-2021 14:49:59 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 14
+[22-May-2021 14:49:59 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 15
+[22-May-2021 14:49:59 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 15
+[22-May-2021 14:49:59 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 14
+[22-May-2021 14:49:59 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 14
+[22-May-2021 14:49:59 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 15
+[22-May-2021 14:49:59 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 15
+[22-May-2021 14:53:09 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 15
+[22-May-2021 14:53:09 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 15
+[22-May-2021 14:53:09 Africa/Accra] PHP Notice:  Undefined variable: connect in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 16
+[22-May-2021 14:53:09 Africa/Accra] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 16
+[22-May-2021 17:04:54 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[22-May-2021 17:09:38 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[22-May-2021 17:11:32 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[22-May-2021 17:13:15 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:13:15 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:13:15 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:14:49 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:14:49 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:14:49 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:14:49 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:16:18 Africa/Accra] PHP Notice:  Undefined index: balance in /home/dzikxroq/portal.dziksagro.com/pages/account_summary.php on line 203
+[22-May-2021 17:31:27 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:31:27 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:31:27 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:31:27 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:41:11 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:41:11 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:41:11 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:41:11 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:43:55 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 17:43:55 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 17:43:55 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 17:43:55 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 17:43:55 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 17:43:55 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 17:43:55 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 17:43:55 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[22-May-2021 17:43:55 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 291
+[22-May-2021 17:53:32 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:53:32 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:53:32 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[22-May-2021 17:53:32 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 206
+[24-May-2021 13:04:00 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[24-May-2021 13:04:13 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[24-May-2021 13:34:47 UTC] PHP Notice:  Undefined index: skin in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 105
+[24-May-2021 13:34:47 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 22
+[24-May-2021 13:34:47 Africa/Accra] PHP Notice:  Undefined index: name in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 187
+[24-May-2021 13:34:47 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 138
+[24-May-2021 13:34:47 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 292
+[24-May-2021 13:34:47 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[24-May-2021 13:35:00 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[24-May-2021 13:46:02 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[24-May-2021 13:46:56 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[24-May-2021 13:47:28 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[24-May-2021 13:47:44 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[24-May-2021 13:47:54 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[24-May-2021 13:47:54 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[24-May-2021 13:47:54 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 291
+[24-May-2021 13:58:48 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[24-May-2021 13:58:48 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 269
+[24-May-2021 13:58:48 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 291
+[24-May-2021 16:30:23 UTC] PHP Notice:  Undefined index: skin in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 160
+[24-May-2021 16:30:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dzikxroq/portal.dziksagro.com/pages/sales.php:160) in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 4
+[24-May-2021 16:30:23 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 22
+[24-May-2021 16:30:23 Africa/Accra] PHP Notice:  Undefined index: name in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 187
+[24-May-2021 16:30:23 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 195
+[24-May-2021 16:30:23 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 203
+[24-May-2021 16:30:23 Africa/Accra] PHP Notice:  Undefined variable: sum in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 302
+[24-May-2021 16:30:23 Africa/Accra] PHP Notice:  Undefined variable: sum2 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 307
+[24-May-2021 16:30:23 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[24-May-2021 16:30:23 Africa/Accra] PHP Notice:  Undefined index: id in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 327
+[24-May-2021 16:30:40 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[24-May-2021 16:30:50 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[24-May-2021 16:31:01 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 290
+[24-May-2021 16:31:01 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 290
+[24-May-2021 16:31:01 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[24-May-2021 16:31:38 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 290
+[24-May-2021 16:31:38 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 290
+[24-May-2021 16:31:38 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[24-May-2021 16:33:21 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 290
+[24-May-2021 16:33:21 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 290
+[24-May-2021 16:33:21 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[24-May-2021 16:34:58 Africa/Accra] PHP Notice:  Undefined variable: sum in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 302
+[24-May-2021 16:34:58 Africa/Accra] PHP Notice:  Undefined variable: sum2 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 307
+[24-May-2021 16:34:58 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[24-May-2021 16:35:15 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[24-May-2021 16:35:26 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[24-May-2021 16:35:31 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[24-May-2021 16:35:38 Africa/Accra] PHP Notice:  Undefined variable: overall in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 287
+[24-May-2021 16:35:38 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 290
+[24-May-2021 16:35:38 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[24-May-2021 16:35:45 Africa/Accra] PHP Notice:  Undefined variable: overall in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 287
+[24-May-2021 16:35:45 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 290
+[24-May-2021 16:35:45 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: supplier_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 227
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: brand_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 228
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: supplier_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 227
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: brand_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 228
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: supplier_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 227
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: brand_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 228
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: supplier_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 227
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: brand_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 228
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: supplier_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 227
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: brand_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 228
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: supplier_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 227
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: brand_id in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 228
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[24-May-2021 16:36:04 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[24-May-2021 16:38:10 Africa/Accra] PHP Notice:  Undefined variable: overall in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 287
+[24-May-2021 16:38:10 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 290
+[24-May-2021 16:38:10 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[24-May-2021 16:39:14 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[24-May-2021 16:39:14 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[24-May-2021 16:40:08 Africa/Accra] PHP Notice:  Undefined variable: sum in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 302
+[24-May-2021 16:40:08 Africa/Accra] PHP Notice:  Undefined variable: sum2 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 307
+[24-May-2021 16:40:08 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[25-May-2021 12:03:11 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[25-May-2021 12:03:54 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[25-May-2021 12:03:54 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[26-May-2021 13:51:36 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 13:51:44 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[26-May-2021 13:51:44 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[26-May-2021 13:56:19 Africa/Accra] PHP Notice:  Undefined variable: sum in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 302
+[26-May-2021 13:56:19 Africa/Accra] PHP Notice:  Undefined variable: sum2 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 307
+[26-May-2021 13:56:19 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[26-May-2021 13:56:32 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 13:56:51 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[26-May-2021 13:57:01 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 13:57:10 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 13:57:18 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 290
+[26-May-2021 13:57:18 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[26-May-2021 14:41:57 UTC] PHP Notice:  Undefined index: skin in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 160
+[26-May-2021 14:41:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dzikxroq/portal.dziksagro.com/pages/sales.php:160) in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 4
+[26-May-2021 14:41:57 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 22
+[26-May-2021 14:41:57 Africa/Accra] PHP Notice:  Undefined index: name in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 187
+[26-May-2021 14:41:57 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 195
+[26-May-2021 14:41:57 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 203
+[26-May-2021 14:41:57 Africa/Accra] PHP Notice:  Undefined variable: sum in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 302
+[26-May-2021 14:41:57 Africa/Accra] PHP Notice:  Undefined variable: sum2 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 307
+[26-May-2021 14:41:57 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 317
+[26-May-2021 14:41:57 Africa/Accra] PHP Notice:  Undefined index: id in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 327
+[26-May-2021 15:00:19 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 15:00:25 Africa/Accra] PHP Notice:  Undefined index: skin in /home/dzikxroq/portal.dziksagro.com/pages/home.php on line 67
+[26-May-2021 15:00:25 Africa/Accra] PHP Notice:  Undefined index: branch in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 22
+[26-May-2021 15:00:25 Africa/Accra] PHP Notice:  Undefined index: name in /home/dzikxroq/portal.dziksagro.com/dist/includes/header.php on line 187
+[26-May-2021 15:05:19 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 15:16:07 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 15:35:45 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 15:35:54 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 15:36:04 Africa/Accra] PHP Notice:  Undefined variable: sum in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 297
+[26-May-2021 15:36:04 Africa/Accra] PHP Notice:  Undefined variable: sum2 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 302
+[26-May-2021 15:36:04 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 318
+[26-May-2021 15:36:54 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[26-May-2021 15:36:54 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[26-May-2021 15:37:28 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[26-May-2021 15:37:28 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[26-May-2021 15:37:28 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[26-May-2021 15:37:28 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[26-May-2021 15:38:04 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[26-May-2021 15:38:04 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[26-May-2021 15:38:04 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[26-May-2021 15:38:04 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[26-May-2021 15:38:16 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 15:38:40 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[26-May-2021 15:39:20 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[26-May-2021 15:39:34 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 15:39:43 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 15:39:50 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 285
+[26-May-2021 15:39:50 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 318
+[26-May-2021 15:42:39 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 285
+[26-May-2021 15:42:39 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 318
+[26-May-2021 15:47:01 Africa/Accra] PHP Notice:  Undefined variable: sum in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 297
+[26-May-2021 15:47:01 Africa/Accra] PHP Notice:  Undefined variable: sum2 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 302
+[26-May-2021 15:47:01 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 318
+[26-May-2021 15:50:09 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[26-May-2021 15:50:09 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[26-May-2021 15:51:16 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 15:51:25 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[26-May-2021 15:51:29 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 15:51:37 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 15:51:46 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 285
+[26-May-2021 15:51:46 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 318
+[26-May-2021 17:59:08 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 17:59:46 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[26-May-2021 17:59:46 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[26-May-2021 18:00:57 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[26-May-2021 18:00:57 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[26-May-2021 18:01:04 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 18:06:55 Africa/Accra] PHP Notice:  Undefined offset: 1 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 197
+[26-May-2021 18:06:55 Africa/Accra] PHP Notice:  Undefined variable: sum in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 297
+[26-May-2021 18:06:55 Africa/Accra] PHP Notice:  Undefined variable: sum2 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 302
+[26-May-2021 18:06:55 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 318
+[26-May-2021 18:07:44 Africa/Accra] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dzikxroq/portal.dziksagro.com/pages/sales.php:160) in /home/dzikxroq/portal.dziksagro.com/pages/inventLogin.php on line 52
+[26-May-2021 18:08:09 Africa/Accra] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dzikxroq/portal.dziksagro.com/pages/sales.php:160) in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 53
+[26-May-2021 18:08:33 Africa/Accra] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dzikxroq/portal.dziksagro.com/pages/sales.php:160) in /home/dzikxroq/portal.dziksagro.com/pages/adminlogin.php on line 52
+[26-May-2021 18:11:22 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[26-May-2021 18:11:22 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[26-May-2021 18:12:57 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[26-May-2021 18:14:54 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[26-May-2021 18:14:54 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[27-May-2021 11:49:21 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[27-May-2021 11:49:52 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[27-May-2021 11:49:52 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[27-May-2021 11:51:48 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[27-May-2021 11:51:48 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[27-May-2021 11:52:18 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[27-May-2021 11:52:18 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[27-May-2021 21:47:09 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[27-May-2021 21:47:27 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[27-May-2021 21:47:27 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[28-May-2021 13:27:02 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[28-May-2021 13:46:59 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[28-May-2021 13:51:13 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[28-May-2021 14:06:44 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[28-May-2021 14:08:07 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[28-May-2021 14:09:16 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[28-May-2021 14:09:41 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[28-May-2021 14:10:09 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[28-May-2021 14:10:09 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[28-May-2021 14:11:11 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[28-May-2021 14:11:11 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[28-May-2021 14:53:36 Africa/Accra] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 109
+[28-May-2021 14:53:41 Africa/Accra] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 109
+[28-May-2021 14:54:33 Africa/Accra] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 109
+[28-May-2021 15:00:47 Africa/Accra] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 109
+[28-May-2021 15:01:55 Africa/Accra] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 109
+[28-May-2021 15:01:58 Africa/Accra] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 109
+[28-May-2021 15:01:58 Africa/Accra] PHP Warning:  mysqli_error() expects exactly 1 parameter, 0 given in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 109
+[28-May-2021 15:43:37 Africa/Accra] PHP Notice:  Undefined index: expense_name in /home/dzikxroq/portal.dziksagro.com/pages/expense_add.php on line 6
+[28-May-2021 15:47:06 Africa/Accra] PHP Notice:  Undefined index: expense_name in /home/dzikxroq/portal.dziksagro.com/pages/expense_add.php on line 6
+[28-May-2021 15:47:10 Africa/Accra] PHP Notice:  Undefined index: expense_cat_name in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 151
+[28-May-2021 15:47:28 Africa/Accra] PHP Notice:  Undefined index: id in /home/dzikxroq/portal.dziksagro.com/pages/expense_update.php on line 7
+[28-May-2021 15:47:31 Africa/Accra] PHP Notice:  Undefined index: expense_cat_name in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 151
+[28-May-2021 15:48:24 Africa/Accra] PHP Notice:  Undefined index: expense_cat_name in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 151
+[28-May-2021 15:48:31 Africa/Accra] PHP Notice:  Undefined index: id in /home/dzikxroq/portal.dziksagro.com/pages/expense_update.php on line 7
+[28-May-2021 15:48:32 Africa/Accra] PHP Notice:  Undefined index: expense_cat_name in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 151
+[28-May-2021 15:50:16 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[28-May-2021 15:50:16 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[28-May-2021 15:50:47 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[28-May-2021 15:50:47 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[28-May-2021 15:50:47 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[28-May-2021 15:50:47 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[28-May-2021 16:02:24 Africa/Accra] PHP Notice:  Undefined index: expense_cat_name in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 152
+[28-May-2021 16:03:57 Africa/Accra] PHP Notice:  Undefined index: expense_cat_name in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 152
+[28-May-2021 16:04:16 Africa/Accra] PHP Notice:  Undefined index: expense_cat_name in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 152
+[28-May-2021 16:05:35 Africa/Accra] PHP Notice:  Undefined index: expense_cat_name in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 152
+[28-May-2021 16:06:12 Africa/Accra] PHP Notice:  Undefined index: expense_cat_name in /home/dzikxroq/portal.dziksagro.com/pages/expenses.php on line 152
+[29-May-2021 00:27:12 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[29-May-2021 00:53:00 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 286
+[29-May-2021 00:53:00 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 319
+[29-May-2021 00:54:46 Africa/Accra] PHP Notice:  Undefined variable: sum in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 298
+[29-May-2021 00:54:46 Africa/Accra] PHP Notice:  Undefined variable: sum2 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 303
+[29-May-2021 00:54:46 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 319
+[29-May-2021 00:55:14 Africa/Accra] PHP Notice:  Undefined variable: sum in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 298
+[29-May-2021 00:55:14 Africa/Accra] PHP Notice:  Undefined variable: sum2 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 303
+[29-May-2021 00:55:14 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 319
+[29-May-2021 00:55:36 Africa/Accra] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dzikxroq/portal.dziksagro.com/pages/sales.php:17) in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 53
+[29-May-2021 00:55:50 Africa/Accra] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dzikxroq/portal.dziksagro.com/pages/sales.php:17) in /home/dzikxroq/portal.dziksagro.com/pages/IncomeLogin.php on line 53
+[31-May-2021 17:01:22 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[31-May-2021 17:03:32 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[31-May-2021 17:04:04 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[31-May-2021 17:04:42 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[31-May-2021 17:05:10 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[31-May-2021 17:05:27 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[31-May-2021 17:14:30 Africa/Accra] PHP Notice:  Undefined variable: sum in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 298
+[31-May-2021 17:14:30 Africa/Accra] PHP Notice:  Undefined variable: sum2 in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 303
+[31-May-2021 17:14:30 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 319
+[31-May-2021 17:16:32 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[31-May-2021 17:23:20 Africa/Accra] PHP Notice:  Undefined index: pid in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 277
+[31-May-2021 17:23:20 Africa/Accra] PHP Notice:  Undefined index: prod_name in /home/dzikxroq/portal.dziksagro.com/pages/stockin.php on line 283
+[31-May-2021 17:24:14 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[31-May-2021 17:24:31 Africa/Accra] PHP Notice:  Undefined index: payment in /home/dzikxroq/portal.dziksagro.com/pages/sales_add.php on line 7
+[31-May-2021 17:24:39 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[31-May-2021 17:24:49 Africa/Accra] PHP Notice:  Undefined index: cid in /home/dzikxroq/portal.dziksagro.com/pages/cash_transaction.php on line 293
+[31-May-2021 17:24:58 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 286
+[31-May-2021 17:24:58 Africa/Accra] PHP Notice:  Undefined variable: discount in /home/dzikxroq/portal.dziksagro.com/pages/sales.php on line 319

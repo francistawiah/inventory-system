@@ -1,8 +1,7 @@
 <?php
 
   
-  $connect = mysqli_connect('localhost', 'root', '', 'inventory');
-
+  include('../dist/includes/dbcon.php');
 
  $errors = array();
 
@@ -12,8 +11,8 @@
  if(isset($_POST['admin_login']))
  {
 
-  $admin_username = mysqli_real_escape_string($connect, $_POST['admin_username']);
-  $admin_pass     = mysqli_real_escape_string($connect, $_POST['admin_pass']);
+  $admin_username = mysqli_real_escape_string($con, $_POST['admin_username']);
+  $admin_pass     = mysqli_real_escape_string($con, $_POST['admin_pass']);
 
   if(empty($admin_username) || empty($admin_pass))
   {
@@ -32,13 +31,13 @@
   else
   {
     $sql ="SELECT * FROM `admin` WHERE username = '$admin_username'";
-    $result = $connect->query($sql)or die(mysqli_error());
+    $result = $con->query($sql)or die(mysqli_error());
 
     if($result->num_rows == 1)
     {
       $password = md5($admin_pass);
       $mainSql = "SELECT * FROM `admin` WHERE username = '$admin_username' AND password = '$password'";
-      $mainResult = $connect->query($mainSql)or die(mysqli_error());
+      $mainResult = $con->query($mainSql)or die(mysqli_error());
 
       if($mainResult->num_rows == 1)
       {

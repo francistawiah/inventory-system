@@ -19,25 +19,46 @@ endif;
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-    <style>
+      <style>
       
+      .btn-back
+      {
+          background: #00a65a;
+          padding: 10px;
+          margin-left: 55px; 
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+
+      }
+
+
+      .btn-back:hover
+      {
+         background: #fff;
+         color: #00a65a;
+         border: 1px solid #00a65a;
+      }
+
+   
+
+    .content-cus
+    {
+      position: relative;
+      top: 30px;
+    }
     </style>
  </head>
-  <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
   <body class="hold-transition skin-<?php echo $_SESSION['skin'];?> layout-top-nav">
     <div class="wrapper">
       <?php include('../dist/includes/header.php');?>
-      <!-- Full Width Column -->
-      <div class="content-wrapper">
-        <div class="container">
-          <!-- Content Header (Page header) -->
-  
-      <section class="content">
-      <h1><a class="btn btn-lg btn-warning" href="home.php">Back</a></h1>
+      <div class="content-wrapper" style="background: #fff;">
+      <div class="container">
+      <h1><a class="btn-back" href="home.php">Back</a></h1>
+      <section class="content content-cus">
       <div class="row" style="margin: 20px;">
+      
       <div class="col-lg-4 col-xs-6">
         <div class="panel panel-default">
          <div class="panel-heading"><strong><center>Total Users</center></strong></div>

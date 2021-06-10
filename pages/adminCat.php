@@ -1,8 +1,7 @@
 <?php
 
   
-  $conDB = mysqli_connect('localhost', 'root', '', 'inventory');
-
+ include('../dist/includes/dbcon.php');
 
   $wrong = array();
 
@@ -31,13 +30,13 @@
   else
   {
     $query ="SELECT * FROM `admin` WHERE username = '$admin_cat_name'";
-    $Result = $conDB->query($query);
+    $Result = $con->query($query);
 
     if($Result->num_rows == 1)
     {
       $Catpass = md5($admin_cat_password);
       $MainSql = "SELECT * FROM `admin` WHERE username = '$admin_cat_name' AND password = '$Catpass'";
-      $MainResult = $conDB->query($MainSql);
+      $MainResult = $con->query($MainSql);
 
       if($MainResult->num_rows == 1)
       {

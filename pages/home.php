@@ -25,46 +25,59 @@ include('IncomeLogin.php');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home | <?php include('../dist/includes/title.php');?></title>
-    <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="../plugins/select2/select2.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     <style>
-      .col-lg-3{
-        margin:50px 0px;
+      .col-lg-3
+      {
+         margin:50px 0px;
+         
+      }
+
+      .box
+      {
+            background: #00a65a;
+            border-radius: 15px;
+      }
+
+      .small-box
+      {
+         border: 2px solid #fff;
+      }
+
+      .box-title
+      {
+        padding-left: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
       }
       
     </style>
  </head>
-  <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+
+
+  <!-- background-image: url('../images/cwesic.jpg'); -->
+
+
   <body class="hold-transition skin-<?php echo $_SESSION['skin'];?> layout-top-nav" onload="myFunction()">
     <div class="wrapper">
       <?php include('../dist/includes/header.php');?>
-      <!-- Full Width Column -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background: #fff;">
         <div class="container">
-          <!-- Content Header (Page header) -->
-         
-
-          <!-- Main content -->
           <section class="content">
             <div class="row">
-	     <!-- <div class="col-md-8"> -->
-              <div class="box box-primary">
+              <div class="box">
                 <div class="box-header with-border">
                   <h3 class="box-title">Transactions</h3>
-                   </div><!-- /.box-header -->
-                    <div class="box-body">
+                   </div>
+                    <div class="box-body" style="padding-left: 50px; padding-right: 50px;">
                       <div class="row">
                        <div class="col-lg-4 col-xs-6">
-                        <!-- small box -->
                         <div class="small-box bg-green">
                           <div class="inner">
                             <h3>Purchase</h3>
@@ -73,45 +86,44 @@ include('IncomeLogin.php');
                           <div class="icon" style="margin-top:10px">
                             <i class="glyphicon glyphicon-euro"></i>
                           </div>
-                          <a href="cust_new.php" class="small-box-footer">
-                            Go <i class="fa fa-arrow-circle-right"></i>
-                          </a>
-                        </div>
-                      </div><!-- ./col -->
-
-
-                      <div class="col-lg-4 col-xs-6">
-                        <!-- small box -->
-                        <div class="small-box bg-red">
-                          <div class="inner">
-                            <h3>Stocking</h3>
-                            <p>Products</p>
-                          </div>
-                          <div class="icon" style="margin-top:10px">
-                            <i class="glyphicon glyphicon-share-alt"></i>
-                          </div>
-                          <a href="stockin.php" class="small-box-footer">
-                            Go <i class="fa fa-arrow-circle-right"></i>
-                          </a>
-                        </div>
-                      </div><!-- ./col -->
-                      
-                      <!-- Payment section -->
-                      <div class="col-lg-4 col-xs-6">
-                        <div class="small-box bg-yellow">
-                          <div class="inner">
-                            <h3>Payment</h3>
-                            <p>Customer</p>
-                          </div>
-                          <div class="icon" style="margin-top:10px">
-                            <i class="glyphicon glyphicon-usd"></i>
-                          </div>
-                          <a href="customer.php" class="small-box-footer">
+                          <a style="background: #fff; color: #00a65a;" href="cash_transaction.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
                           </a>
                         </div>
                       </div>
-                      <!-- Payment section -->
+
+
+                      <div class="col-lg-4 col-xs-6">
+                        <div class="small-box bg-green">
+                          <div class="inner">
+                            <h3>Stock-In</h3>
+                            <p>Stock Products Here...</p>
+                          </div>
+                          <div class="icon" style="margin-top:10px">
+                            <i class="glyphicon glyphicon-share-alt"></i>
+                          </div>
+                          <a style="background: #fff; color: #00a65a;" href="stockin.php" class="small-box-footer">
+                            Go <i class="fa fa-arrow-circle-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <!-- Customer section -->
+                      <div class="col-lg-4 col-xs-6">
+                        <div class="small-box bg-green">
+                          <div class="inner">
+                            <h3>Expenses</h3>
+                            <p>View/Add Expenses here</p>
+                          </div>
+                          <div class="icon" style="margin-top:10px">
+                            <i class="glyphicon glyphicon-usd"></i>
+                          </div>
+                          <a style="background: #fff; color: #00a65a;" href="expenses.php" class="small-box-footer">
+                            Go <i class="fa fa-arrow-circle-right"></i>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Customer section -->
 
                       <!-- 
                       <div class="col-lg-4 col-xs-6">
@@ -130,31 +142,31 @@ include('IncomeLogin.php');
                       </div> --><!-- ./col -->
 
                       <div class="col-lg-4 col-xs-6">
-                        <div class="small-box bg-red">
+                        <div class="small-box bg-green">
                           <div class="inner">
                             <h3>Creditors</h3>
-                            <p>Apply</p>
+                            <p> Creditor Lists </p>
                           </div>
                           <div class="icon" style="margin-top:10px">
                             <i class="glyphicon glyphicon-user"></i>
                           </div>
-                          <a href="creditor.php" class="small-box-footer">
+                          <a style="background: #fff; color: #00a65a;" href="creditor.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
                           </a>
                         </div>
-                      </div><!-- ./col -->
+                      </div><!--./col -->
 
 
                       <div class="col-lg-4 col-xs-6">
-                        <div class="small-box bg-orange">
+                        <div class="small-box bg-green">
                           <div class="inner">
                             <h3>Products</h3>
-                            <p>View/Add</p>
+                            <p>View/Add Products Here...</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
                             <i class="glyphicon glyphicon-shopping-cart"></i>
                           </div>
-                          <a href="#adminLogin" class="small-box-footer" data-target="#adminLogin" data-toggle="modal">
+                          <a style="background: #fff; color: #00a65a;" href="#adminLogin" class="small-box-footer" data-target="#adminLogin" data-toggle="modal">
                             Go <i class="fa fa-arrow-circle-right"></i>
                           </a>
                         </div>
@@ -162,60 +174,62 @@ include('IncomeLogin.php');
 
                        <div class="col-lg-4 col-xs-6">
                         <!-- small box -->
-                        <div class="small-box bg-purple">
+                        <div class="small-box bg-green">
                           <div class="inner">
                             <h3>Brands</h3>
-                            <p>View/Add</p>
+                            <p>View/Add Product Brands Here...</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
                             <i class="glyphicon glyphicon-btc"></i>
                           </div>
-                          <a href="adminBrandLogin" class="small-box-footer" data-target="#adminBrandLogin" data-toggle="modal">
+                          <a style="background: #fff; color: #00a65a;" href="adminBrandLogin" class="small-box-footer" data-target="#adminBrandLogin" data-toggle="modal">
                             Go <i class="fa fa-arrow-circle-right"></i>
                           </a>
                         </div>
                       </div><!-- ./col -->
+                        
+
                         <div class="col-lg-4 col-xs-6">
                         <!-- small box -->
-                        <div class="small-box bg-purple">
+                        <div class="small-box bg-green">
                           <div class="inner">
                             <h3>Records</h3>
-                            <p>View</p>
+                            <p>View Inventory Records</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
                             <i class="glyphicon glyphicon-th"></i>
                           </div>
-                          <a href="#adminrecordLogin" class="small-box-footer" data-target="#adminrecordLogin" data-toggle="modal">
+                          <a style="background: #fff; color: #00a65a;" href="#adminrecordLogin" class="small-box-footer" data-target="#adminrecordLogin" data-toggle="modal">
                             Go <i class="fa fa-arrow-circle-right"></i>
                           </a>
                         </div>
                       </div>
 
                        <div class="col-lg-4 col-xs-6">
-                        <div class="small-box bg-blue">
+                        <div class="small-box bg-green">
                           <div class="inner">
                             <h3>Categories</h3>
-                            <p>View/Add</p>
+                            <p>View/Add Product Categories</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
                             <i class="glyphicon glyphicon-gift"></i>
                           </div>
-                          <a href="#admincatLogin" class="small-box-footer" data-target="#admincatLogin" data-toggle="modal">
+                          <a style="background: #fff; color: #00a65a;" href="#admincatLogin" class="small-box-footer" data-target="#admincatLogin" data-toggle="modal">
                             Go <i class="fa fa-arrow-circle-right"></i>
                           </a>
                         </div>
-                      </div><!-- ./col -->
+                      </div>
 
                       <div class="col-lg-4 col-xs-6">
                         <div class="small-box bg-green">
                           <div class="inner">
                             <h3>Suppliers</h3>
-                            <p>View/Add</p>
+                            <p>View/Add Product Supplier</p>
                           </div>
                           <div class="icon" style="margin-top:10px">
                             <i class="glyphicon glyphicon-user"></i>
                           </div>
-                          <a href="#adminsupLogin" class="small-box-footer" data-target="#adminsupLogin" data-toggle="modal">
+                          <a style="background: #fff; color: #00a65a;" href="#adminsupLogin" class="small-box-footer" data-target="#adminsupLogin" data-toggle="modal">
                             Go <i class="fa fa-arrow-circle-right"></i>
                           </a>
                         </div>
@@ -223,7 +237,7 @@ include('IncomeLogin.php');
 
                       <div class="col-lg-4 col-xs-6">
                         <!-- small box -->
-                        <div class="small-box bg-orange">
+                        <div class="small-box bg-green">
                           <div class="inner">
                             <h3>Installment</h3>
                             <p>Apply</p>
@@ -231,7 +245,7 @@ include('IncomeLogin.php');
                           <div class="icon" style="margin-top:10px">
                             <i class="glyphicon glyphicon-user"></i>
                           </div>
-                          <a href="install.php" class="small-box-footer">
+                          <a style="background: #fff; color: #00a65a;" href="install.php" class="small-box-footer">
                             Go <i class="fa fa-arrow-circle-right"></i>
                           </a>
                         </div>

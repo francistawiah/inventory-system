@@ -9,32 +9,86 @@ endif;
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Product Reorder | <?php include('../dist/includes/title.php');?></title>
-    <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-    <style>
+     <style>
       
+      .btn-back
+      {
+          background: #00a65a;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+
+      }
+
+
+      .btn-back:hover
+      {
+         background: #fff;
+         color: #00a65a;
+         border: 1px solid #00a65a;
+      }
+
+      .btn-add
+      {
+          background: #00a65a;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+      }
+
+    .box
+     {
+         border-top: 5px solid #00a65a;
+        border-left: 4px solid #e3e3e3; 
+        border-right: 4px solid #e3e3e3; 
+        border-bottom: 4px solid #e3e3e3; 
+     }
+
+     .select2
+     {
+       border: 1px solid #00a65a;
+     }
+
+     .btn-request
+     {
+          background: #00a65a;
+          padding: 5px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+     }
+
+     .btn-request:hover
+     {
+         background: #fff;
+         color: #605ca8;
+         border: 1px solid #00a65a;
+     }
+
+    .content-cus
+    {
+      position: relative;
+      top: 30px;
+      margin-bottom: 30px;
+    }
     </style>
  </head>
-  <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
   <body class="hold-transition skin-<?php echo $_SESSION['skin'];?> layout-top-nav">
     <div class="wrapper">
       <?php include('../dist/includes/header.php');?>
-      <!-- Full Width Column -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background: #fff;">
         <div class="container">
-          <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              <a class="btn btn-lg btn-warning" href="home.php">Back</a>
-              <a class="btn btn-lg btn-info" href="request.php">View Purchase Request</a>
+              <a class="btn-back" href="home.php">Back</a>
+              <a class="btn-back" href="request.php">View Purchase Request</a>
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -43,16 +97,13 @@ endif;
           </section>
 
           <!-- Main content -->
-          <section class="content">
+          <section class="content content-cus">
             <div class="row">
-	      
-            
             <div class="col-xs-12">
-              <div class="box box-primary">
-    
+              <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Reorder List</h3>
-                </div><!-- /.box-header -->
+                </div>
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
@@ -69,12 +120,13 @@ endif;
                       </tr>
                     </thead>
                     <tbody>
-<?php
+                   <?php
 		
-		$query=mysqli_query($con,"select * from product natural join supplier natural join category where branch_id='$branch' and prod_qty<=reorder order by prod_name")or die(mysqli_error());
-		while($row=mysqli_fetch_array($query)){
+		                  $query = mysqli_query($con,"select * from product natural join supplier natural join category where branch_id ='$branch' and prod_qty <= reorder order by prod_name") or die(mysqli_error());
+		                while($row = mysqli_fetch_array($query))
+                     {
 		
-?>
+                   ?>
                       <tr>
                         <td><?php echo $row['prod_name'];?></td>
 						            <td><?php echo $row['supplier_name'];?></td>
@@ -84,7 +136,7 @@ endif;
             						<td><?php echo $row['reorder'];?></td>
 
                         <td>
-				<a href="#updateordinance<?php echo $row['prod_id'];?>" data-target="#updateordinance<?php echo $row['prod_id'];?>" data-toggle="modal" class="btn btn-primary">Request Purchase</a>
+				                   <a class="btn-request" href="#updateordinance<?php echo $row['prod_id'];?>" data-target="#updateordinance<?php echo $row['prod_id'];?>" data-toggle="modal" class="btn btn-primary">Request Purchase</a>
 			
 						</td>
           </tr>

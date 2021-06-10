@@ -38,162 +38,163 @@ $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die
             <!-- Navbar Right Menu -->
               <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                  <!-- Messages: style can be found in dropdown.less-->
-				            <li class="">
-                
-                    <a href="log.php" class="dropdown-toggle">
-                      <i class="glyphicon glyphicon-list-alt"></i>
-                      History Log
+
+                    <!-- Stock In Begin -->
+                    <li class="dropdown notifications-menu">
+                    <a href="stockin.php">
+                      <i class="glyphicon glyphicon-edit text-white"></i> Stock-In    
                     </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                      </li>
+                     
+                    </ul>
                   </li>
-                  <!-- Notifications Menu -->
+                  <!-- Stock In End -->
+
+
+                  <!-- Out of stock products -->
                   <li class="dropdown notifications-menu">
-                    <!-- Menu toggle button -->
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <i class="glyphicon glyphicon-refresh text-red"></i> Reorder
+                      <i class="glyphicon glyphicon-refresh text-white"></i> Stock-Out
                       <span class="label label-danger">
                       <?php 
-                      $query=mysqli_query($con,"select COUNT(*) as count from product where prod_qty<=reorder and branch_id='$branch'")or die(mysqli_error());
-                			$row=mysqli_fetch_array($query);
-                			echo $row['count'];
-                			?>	
+                      $query = mysqli_query($con,"select COUNT(*) as count from product where prod_qty<=reorder and branch_id='$branch'")or die(mysqli_error());
+                      $row = mysqli_fetch_array($query);
+                      echo $row['count'];
+                      ?>  
                       </span>
                     </a>
                     <ul class="dropdown-menu">
                       <li class="header">You have <?php echo $row['count'];?> products that needs reorder</li>
                       <li>
-                        <!-- Inner Menu: contains the notifications -->
                         <ul class="menu">
                         <?php
-                        $queryprod=mysqli_query($con,"select prod_name from product where prod_qty<=reorder and branch_id='$branch'")or die(mysqli_error());
-			                 
-                        while($rowprod=mysqli_fetch_array($queryprod)){
-			                   ?>
-                          <li><!-- start notification -->
+
+                        // Selecting product with lower quantity
+
+                        $queryprod = mysqli_query($con,"select prod_name from product where prod_qty<=reorder and branch_id='$branch'")or die(mysqli_error());
+                       
+                        while($rowprod = mysqli_fetch_array($queryprod)){
+                         ?>
+                          <li>
                             <a href="reorder.php">
                               <i class="glyphicon glyphicon-refresh text-red"></i> <?php echo $rowprod['prod_name'];?>
                             </a>
-                          </li><!-- end notification -->
+                          </li>
                           <?php }?>
                         </ul>
                       </li>
-                      <li class="footer"><a href="inventory.php">View all</a></li>
+                      <li class="footer"><a href="reorder.php">View all</a></li>
                     </ul>
-                  </li>
-                  <!-- Tasks Menu -->
-				            <li class="dropdown notifications-menu">
-                    <!-- Menu toggle button -->
+                  </li> <!-- Out of Stock Products End -->
+
+                   <!-- Inventory Report Start -->
+                  <li class="dropdown notifications-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <i class="glyphicon glyphicon-wrench"></i> Maintenance
-                      
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <!-- Inner Menu: contains the notifications -->
-                        <ul class="menu">
-						            <li><!-- start notification -->
-                            <a href="#admincatLogin" data-target="#admincatLogin" data-toggle="modal">
-                              <i class="glyphicon glyphicon-user text-green"></i> Category
-                            </a>
-                          </li><!-- end notification -->
-						              <li><!-- start notification -->
-                            <a href="#adminpaymentLogin" data-target="#adminpaymentLogin" data-toggle="modal">
-                              <i class="glyphicon glyphicon-user text-green"></i> Customer
-                            </a>
-                          </li><!-- end notification -->
-                          <li><!-- start notification -->
-                            <a href="creditor.php">
-                            <i class="glyphicon glyphicon-user text-green"></i> Credit Applicants
-                            </a>
-                          </li><!-- end notification -->
-						               <li><!-- start notification -->
-                            <a href="#adminLogin" data-target="#adminLogin" data-toggle="modal">
-                              <i class="glyphicon glyphicon-cutlery text-green"></i> Product
-                            </a>
-                          </li><!-- end notification -->
-						 
-						                <li><!-- start notification -->
-                            <a href="#adminsupLogin" data-target="#adminsupLogin" data-toggle="modal">
-                            <i class="glyphicon glyphicon-send text-green"></i> Supplier
-                            </a>
-                          </li><!-- end notification -->						 
-                        </ul>
-                      </li>
-                     
-                    </ul>
-                  </li>
-                  <!-- Tasks Menu -->
-				   <!-- Tasks Menu -->
-				            <li class="dropdown notifications-menu">
-                    <!-- Menu toggle button -->
-                    <a href="stockin.php">
-                      <i class="glyphicon glyphicon-list text-green"></i> Stock-In
-                      
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li>
-                      </li>
-                     
-                    </ul>
-                  </li>
-                  <!-- Tasks Menu -->
-				          <li class="dropdown notifications-menu">
-                    <!-- Menu toggle button -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <i class="glyphicon glyphicon-stats text-blue"></i> Report
-                     
+                      <i class="glyphicon glyphicon-stats text-white"></i> Report
                     </a>
                     <ul class="dropdown-menu">
                      <li>
-                        <!-- Inner Menu: contains the notifications -->
                         <ul class="menu">
-                        
-                          <li><!-- start notification -->
+                          <li>
                             <a href="#InventoryLogin" data-target="#InventoryLogin" data-toggle="modal">
                               <i class="glyphicon glyphicon-ok text-green"></i>Inventory
                             </a>
-                          </li><!-- end notification -->
-						            <li><!-- start notification -->
+                          </li>
+                        <li>
                          <a href="#SalesLogin" data-target="#SalesLogin" data-toggle="modal">
                               <i class="glyphicon glyphicon-usd text-blue"></i>Sales
                             </a>
-                          </li><!-- end notification -->
-					               <li><!-- start notification -->
-                         <a href="#RecLogin" data-target="#RecLogin" data-toggle="modal">
-                         <i class="glyphicon glyphicon-th-list text-redr"></i>Account Receivables
-                            </a>
-                          </li><!-- end notification -->
-						              <li><!-- start notification -->
+                          </li>
+                      
+                          <li>
                          <a href="#IncomeLogin" data-target="#IncomeLogin" data-toggle="modal">
                          <i class="glyphicon glyphicon-th-list text-redr"></i>Branch Income
                             </a>
-                          </li><!-- end notification -->
-                          <li><!-- start notification -->
+                          </li>
+                          <li>
                          <a href="purchase_request.php">
                             <i class="glyphicon glyphicon-usd text-blue"></i>Purchase Request
                             </a>
-                          </li><!-- end notification -->
+                          </li>
                         </ul>
                       </li>
                     </ul>
                   </li>
+                  <!-- Inventory Report End -->
+            
                   <!-- Tasks Menu -->
+				            <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="glyphicon glyphicon-wrench"></i> Maintenance
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <ul class="menu">
+                           <li>
+                            <a href="#adminLogin" data-target="#adminLogin" data-toggle="modal">
+                              <i class="glyphicon glyphicon-cutlery text-green"></i> Products
+                            </a>
+                          </li>
+
+						              <li>
+                            <a href="#admincatLogin" data-target="#admincatLogin" data-toggle="modal">
+                              <i class="glyphicon glyphicon-user text-green"></i> Categories
+                            </a>
+                          </li>
+
+                           <li>
+                            <a href="#adminsupLogin" data-target="#adminsupLogin" data-toggle="modal">
+                            <i class="glyphicon glyphicon-send text-green"></i> Suppliers
+                            </a>
+                           </li>     
+
+						              <li>
+                            <a href="#adminpaymentLogin" data-target="#adminpaymentLogin" data-toggle="modal">
+                              <i class="glyphicon glyphicon-user text-green"></i> Customers
+                            </a>
+                          </li>
+
+                          <li>
+                            <a href="creditor.php">
+                            <i class="glyphicon glyphicon-user text-green"></i> Creditors 
+                            </a>
+                          </li>
+						              
+						              	 
+                        </ul>
+                      </li>
+                     
+                    </ul>
+                  </li>
+                  <!-- Tasks Menu -->
+
+                   <!-- History Logs -->
+                    <li class="">
+                    <a href="log.php" class="dropdown-toggle">
+                      <i class="glyphicon glyphicon-list-alt"></i>
+                      History Log
+                    </a>
+                  </li>
+                  <!-- History Logs End -->
+				      
+
+
 				            <li class="">
-                    <!-- Menu Toggle Button -->
                     <a href="profile.php" class="dropdown-toggle">
-                      <i class="glyphicon glyphicon-cog text-orange"></i>
+                      <i class="glyphicon glyphicon-cog text-white"></i>
                       <?php echo $_SESSION['name'];?>
                     </a>
                   </li>
                   <li class="">
-                    <!-- Menu Toggle Button -->
                     <a href="logout.php" class="dropdown-toggle">
                       <i class="glyphicon glyphicon-off text-red"></i> Logout  
                     </a>
                   </li>
                 </ul>
-              </div><!-- /.navbar-custom-menu -->
-          </div><!-- /.container-fluid -->
+              </div>
+          </div>
         </nav>
       </header>
 

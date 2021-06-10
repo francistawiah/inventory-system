@@ -1,8 +1,7 @@
 <?php
 
   
-  $connect = mysqli_connect('localhost', 'root', '', 'inventory');
-
+  include('../dist/includes/dbcon.php');
 
  $sales_error = array();
 
@@ -12,8 +11,8 @@
  if(isset($_POST['sale_admin']))
  {
 
-  $sale_name         = mysqli_real_escape_string($connect, $_POST['sale_name']);
-  $sale_password     = mysqli_real_escape_string($connect, $_POST['sale_password']);
+  $sale_name         = mysqli_real_escape_string($con, $_POST['sale_name']);
+  $sale_password     = mysqli_real_escape_string($con, $_POST['sale_password']);
 
   if(empty($sale_name) || empty($sale_password))
   {
@@ -32,13 +31,13 @@
   else
   {
     $sql ="SELECT * FROM `admin` WHERE username = '$sale_name'";
-    $result = $connect->query($sql)or die(mysqli_error());
+    $result = $con->query($sql)or die(mysqli_error());
 
     if($result->num_rows == 1)
     {
       $salepassword = md5($sale_password);
       $mainSql = "SELECT * FROM `admin` WHERE username = '$sale_name' AND password = '$salepassword'";
-      $mainResult = $connect->query($mainSql)or die(mysqli_error());
+      $mainResult = $con->query($mainSql)or die(mysqli_error());
 
       if($mainResult->num_rows == 1)
       {

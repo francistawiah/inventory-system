@@ -1,42 +1,74 @@
-<?php session_start();
+<?php 
+
+session_start();
+
 if(empty($_SESSION['id'])):
 header('Location:../index.php');
 endif;
+
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Customer | <?php include('../dist/includes/title.php');?></title>
-    <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="../plugins/select2/select2.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
     <style>
       
+      .btn-back
+      {
+          background: #605ca8;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+
+      }
+
+      .btn-back:hover
+      {
+         background: #fff;
+         color: #605ca8;
+         border: 1px solid #605ca8;
+      }
+
+    .box
+     {
+        border-top: 5px solid #605ca8;
+        border-left: 4px solid #e3e3e3; 
+        border-right: 4px solid #e3e3e3; 
+        border-bottom: 4px solid #e3e3e3; 
+     }
+
+     .select2
+     {
+       border: 1px solid #605ca8;
+     }
+
+    .content-cus
+    {
+      position: relative;
+      top: 30px;
+    }
     </style>
  </head>
-  <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
   <body class="hold-transition skin-<?php echo $_SESSION['skin'];?> layout-top-nav">
     <div class="wrapper">
       <?php include('../dist/includes/header.php');
       include('../dist/includes/dbcon.php');
       ?>
-      <!-- Full Width Column -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background: #fff;">
         <div class="container">
-          <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              <a class="btn btn-lg btn-warning" href="home.php">Back</a>
+              <a class="btn-back" href="home.php">Back</a>
               
             </h1>
             <ol class="breadcrumb">
@@ -46,68 +78,48 @@ endif;
           </section>
 
           <!-- Main content -->
-          <section class="content">
+          <section class="content content-cus">
             <div class="row">
-	          
-			
             <div class="col-xs-12">
-              <div class="box box-primary">
-    
+              <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Customer List</h3>
-                </div><!-- /.box-header -->
+                </div>
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-            						<th>Account #</th>
+            						<th>No. #</th>
                         <th>Last Name</th>
                         <th>First Name</th>
                         <th>Address</th>
                         <th>Contact </th>
-                        <th>Balance</th>
-                        <th>Customer Status</th>
-                        <th>Credit Status</th>
                         <th>Action</th>
 						
                       </tr>
                     </thead>
                     <tbody>
-<?php
-		$branch=$_SESSION['branch'];
-		$query=mysqli_query($con,"select * from customer where branch_id='$branch'")or die(mysqli_error());
-		$i=1;
-		while($row=mysqli_fetch_array($query)){
-		$cid=$row['cust_id'];
-?>
+                    <?php
+                    		$branch = $_SESSION['branch'];
+                    		$query = mysqli_query($con,"select * from customer where branch_id='$branch'")or die(mysqli_error());
+                    		$i = 1;
+                    		while($row = mysqli_fetch_array($query)){
+                    		$cid = $row['cust_id'];
+                    ?>
                       <tr>
-					             <td><?php echo $row['cust_id'];?></td>
+					              <td><?php echo $row['cust_id'];?></td>
                         <td><?php echo $row['cust_last'];?></td>
                         <td><?php echo $row['cust_first'];?></td>
                         <td><?php echo $row['cust_address'];?></td>
             						<td><?php echo $row['cust_contact'];?></td>
-            						<td>₵<?php echo number_format($row['balance'],2);?></td>
-                        <td><?php 
-                         if ($row['cust_status']=='Active') 
-                        {
-                            echo "<span class='badge bg-green'>Active</span>";
-                         }
-                         else
-                         {
-                            echo "<span class='badge bg-red'>Inactive</span>";
-                         }
-
-                        ?></td>
-            						<td><?php if ($row['balance']==0) 
-								echo "<span class='label label-danger'>inactive</span>";
-								else echo "<span class='label label-info'>active</span>";
-							?></td>
                         <td>
-				<a href="#updateCustomer<?php echo $row['cust_id'];?>" data-target="#updateCustomer<?php echo $row['cust_id'];?>" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-edit text-blue"></i></a>
+            				<a href="#updateCustomer<?php echo $row['cust_id'];?>" data-target="#updateCustomer<?php echo $row['cust_id'];?>" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-edit text-blue"></i></a>
 
-         <a href="#delete<?php echo $row['cust_id'];?>" data-target="#delete<?php echo $row['cust_id'];?>" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-trash text-red"></i></a>
-						</td>
-              </tr>
+                     <a href="#delete<?php echo $row['cust_id'];?>" data-target="#delete<?php echo $row['cust_id'];?>" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-trash text-red"></i></a>
+
+                     <a href="account_summary.php?cid=<?php echo $row['cust_id'];?>" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-th text-green"></i></a>
+            						</td>
+                  </tr>
 
 
 				 
@@ -137,43 +149,24 @@ endif;
                 <div class="col-lg-9">
                 <input type="hidden" class="form-control" id="id" name="id" value="<?php echo $row['cust_id'];?>" required>  
                 <input type="text" class="form-control" id="name" name="first" value="<?php echo $row['cust_first'];?>" required>  
-          </div>
-        </div> 
+                </div>
+             </div> 
         
-        <div class="form-group">
-          <label class="control-label col-lg-3" for="file">Address</label>
-          <div class="col-lg-9">
-            <input type="text" class="form-control" id="name" name="address" value="<?php echo $row['cust_address'];?>" required>  
-          </div>
-        </div>
+              <div class="form-group">
+                <label class="control-label col-lg-3" for="file">Address</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" id="name" name="address" value="<?php echo $row['cust_address'];?>" required>  
+                </div>
+              </div>
 
           <div class="form-group">
               <label class="control-label col-lg-3" >Contact</label>
               <div class="col-lg-9">
               <input type="hidden" class="form-control" id="id" name="id" value="<?php echo $row['cust_id'];?>" required>  
                 <input type="text" class="form-control" id="name" name="contact" value="<?php echo $row['cust_contact'];?>" required>  
-              </div><!-- /.input group -->
-              </div><!-- /.form group -->
-        
-              <div class="form-group">
-              <label class="control-label col-lg-3" >Balance</label>
-              <div class="col-lg-9">
-              <input type="hidden" class="form-control" id="id" name="id" value="<?php echo $row['cust_id'];?>" required>  
-              <input type="text" class="form-control" id="name" name="balance" value="<?php echo $row['balance'];?>" required> 
-              </div><!-- /.input group -->
-              </div><!-- /.form group -->
-
-              <div class="form-group">
-              <label class="control-label col-lg-3" for="price">Status</label>
-              <div class="col-lg-9">
-                <select class="form-control" name="cust_status" id="price" style="width: 100%;" required>
-                 <option value="Active">Active</option>
-                 <option value="Inactive">Inactive</option>
-              </select>
               </div>
-            </div>
+              </div>
 
-        
               </div><br><br><br><br><br><br><br><br><br><br>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -181,7 +174,7 @@ endif;
               </div>
              </form>
             </div>  
-          </div><!--end of modal-dialog-->
+          </div>
       </div>
  <!--end of modal-->    
 
@@ -212,28 +205,19 @@ endif;
                     </div>
               </form>
             </div>
-      
-        </div><!--end of modal-dialog-->
- </div>
-
-
+        </div>
+      </div>
  <!--end of modal-->    
-
-
-
-                 
-<?php $i++;}?>					  
+   
+                  <?php $i++; } ?>					  
                     </tbody>
                     <tfoot>
                       <tr>
                         <th>#</th>
-                        <th>Customer Last Name</th>
-                        <th>Customer First Name</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
                         <th>Address</th>
                         <th>Contact #</th>
-                        <th>Balance</th>
-                        <th>Customer Status</th>
-                        <th>Credit Status</th>
                         <th>Action</th>
                       </tr>					  
                     </tfoot>

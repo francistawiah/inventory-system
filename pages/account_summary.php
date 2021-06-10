@@ -12,39 +12,22 @@ endif;
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Customer Account | <?php include('../dist/includes/title.php');?></title>
-    <!-- Tell the browser to be responsive to screen width -->
+    <title>Customer Shopping Details | <?php include('../dist/includes/title.php');?></title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="../plugins/select2/select2.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-    <style>
-      img.profile_pic {
-    width: 152px;
-    height: 125px;
-    border: 5px solid #ccc;
-}
-    </style>
  </head>
-  <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
   <body class="hold-transition skin-<?php echo $_SESSION['skin'];?> layout-top-nav">
     <div class="wrapper">
       <?php include('../dist/includes/header.php');
       include('../dist/includes/dbcon.php');
       ?>
-      <!-- Full Width Column -->
       <div class="content-wrapper">
         <div class="container">
-          <!-- Content Header (Page header) -->
           <section class="content-header">
-        
-         
             <h1>
               <a class="btn btn-lg btn-warning" href="customer.php">Back</a>
               
@@ -60,11 +43,14 @@ endif;
                 <div class="box-body">
                   <!-- Date range -->
                   <form method="post" action="" enctype="multipart/form-data">
-		  <?php
-		    
-		      $query=mysqli_query($con,"select * from customer")or die(mysqli_error());
-			       $row=mysqli_fetch_array($query);
-		  ?>	
+            		  <?php
+
+                      $branch_id = $_SESSION['branch'];
+
+            		      $query = mysqli_query($con,"select * from customer where branch_id = '$branch_id'")or die(mysqli_error());
+
+            			     $row  = mysqli_fetch_array($query);
+            		  ?>	
 		    
                   <div class="form-group">
                     <label for="date">Customer Name</label>
@@ -86,86 +72,22 @@ endif;
                      
                     <div class="input-group col-md-12">
                       <?php echo $row['cust_contact'];?>
-                    </div><!-- /.input group -->
-                  </div><!-- /.form group -->
-                  <div class="form-group">
-                    <label for="date">Balance</label>
-                    <div class="input-group col-md-12">
-                      <h3><?php echo number_format($row['balance'],2);?></h3>
-                    </div><!-- /.input group -->
-                  </div><!-- /.form group -->
-                  <a href="<?php if ($row['balance']<=0) echo "transaction.php?cid=$cid";?>" class="btn btn-block btn-primary">
-                  <i class="glyphicon glyphicon-shopping-cart text-blue"></i>Add New Order</a>
-                
+                    </div>
+                  </div>
 				          </form>	
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col (right) -->
+                </div>
+              </div>
+            </div>
             
             <div class="col-xs-9">
               <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
-                  <li class=""><a href="#fa-icons" data-toggle="tab" aria-expanded="true">Credit History</a></li>
                   <li class=""><a href="#cash" data-toggle="tab">Cash History</a></li>
-                  <li class=""><a href="#payments" data-toggle="tab" aria-expanded="false">Payments</a></li>
                 </ul>
-                <div class="tab-content">
-                  <!-- Font Awesome Icons -->
-                  
-                  <div class="tab-pane active" id="fa-icons">
-                    <table id="" class="table table-bordered table-striped">
-                  <thead>
-                      <tr>
-                        <th>Credit #</th>                      
-                        <th>Qty</th>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Term</th>
-                        <th>Payable for</th>
-                        <th>Amount Due</th>
-                        <th>Order Date</th>
-                        <th>Due Date</th>
-                        <th>Payment Status</th>
-                        <th>View</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-<?php
-   // $cid=$_REQUEST['cid'];
-    $query1=mysqli_query($con,"select * from sales natural join sales_details natural join product natural join term order by date_added desc")or die(mysqli_error($con));
-    while($row1=mysqli_fetch_array($query1)){
-    
-?>
-                      <tr>
-                        <td><?php echo $row1['term_id'];?></td>
-                        <td><?php echo $row1['qty'];?></td>
-                        <td><?php echo $row1['prod_name'];?></td>
-                        <td><?php echo $row1['prod_price'];?></td>
-                        <td><?php echo $row1['term'];?></td>
-                        <td><?php echo $row1['payable_for'];?> month/s</td>
-                        <td><?php echo $row1['due'];?></td>
-                        <td><?php echo date("M d, Y",strtotime($row1['date_added']));?></td>
-                       <td><?php echo date("M d, Y",strtotime($row1['due_date']));?></td>
-                        <td><?php 
-                        if ($row1['status']=='paid') 
-                        echo "<span class='badge bg-green'>".$row1['status']."</span>";
-                        else echo "<span class='badge bg-red'>unpaid</span>";
-                        ?>
+                <div class="tab-content"> 
 
-                      </td>
-                      <td>
-                        <a href="payment.php?cid=<?php echo $row['cust_id'];?>&sid=<?php echo $row1['sales_id'];?>"><i class="glyphicon glyphicon-share-alt"></i></a>
-                        <a href="reprint.php?sid=<?php echo $row1['sales_id'];?>"><i class="glyphicon glyphicon-print"></i></a>
-                        <a href="print.php?sid=<?php echo $row1['sales_id'];?>&cid=<?php echo $row['cust_id'];?>"><i class="glyphicon glyphicon-list"></i></a>
-                      </td>  
-                      </tr>
-    <?php }?>       
-                      </tbody>
-                  
-                  </table>
-                  </div><!-- /#fa-icons -->
 
-                  <div class="tab-pane" id="cash">
+                  <div class="tab-pane active" id="cash">
                     <table id="" class="table table-bordered table-striped">
                   <thead>
                       <tr>
@@ -175,7 +97,7 @@ endif;
                         <th>Qty</th>
                         <th>Amount</th>
                         <th>Date Paid</th>
-                        <th>Reprint</th>
+                        <th>Print</th>
                       </tr>
                     </thead>
                     <tbody>

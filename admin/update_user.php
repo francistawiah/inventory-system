@@ -3,7 +3,7 @@ include('dbcon.php');
 
  if (isset($_POST['update']))
  { 
-	 $id = $_POST['user_id'];
+	 $id   = $_POST['user_id'];
 	 $name = $_POST['name'];
 	 $username = $_POST['username'];
 	 $password = $_POST['password'];
@@ -13,8 +13,7 @@ include('dbcon.php');
 	 if($password=="")
 	 {
 		 
-	 mysqli_query($con,"UPDATE user SET username='$username', name = '$name', status = '$status', branch_id = '$branch_id' where user_id='$id'")
-	 or die(mysqli_error($con)); 
+	    mysqli_query($con,"UPDATE user SET username='$username', name = '$name', status = '$status', branch_id = '$branch_id' where user_id='$id'")or die(mysqli_error($con)); 
 	 }
 	 else
 	 {
@@ -22,8 +21,7 @@ include('dbcon.php');
 		$salt="a1Bz20ydqelm8m1wql";
 		$pass=$salt.$pass;
 
-		 mysqli_query($con,"UPDATE user SET username='$username', password = '$pass', name = '$name', status = '$status', branch_id = '$branch_id' where user_id='$id'")
-	 or die(mysqli_error($con)); 
+		 mysqli_query($con,"UPDATE user SET username='$username', password = '$pass', name = '$name', status = '$status', branch_id = '$branch_id' where user_id='$id'")or die(mysqli_error($con)); 
 	 }
 		echo "<script type='text/javascript'>alert('Successfully updated user details!');</script>";
 		echo "<script>document.location='user.php'</script>";

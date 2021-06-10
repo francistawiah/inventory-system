@@ -1,6 +1,6 @@
 <?php
 
-	$ProfDB = mysqli_connect('localhost', 'root', '','inventory');
+	include('../dist/includes/dbcon.php');
 
 	$total = "";
 
@@ -36,7 +36,7 @@
 
 		$sql = "INSERT INTO income(net_sales, total_discount, supplier_amount, interest_income,sale_expense, other_income,total_profit, branch_id, income_date) VALUES('$net_sales', '$total_discount', '$supplier_amt', '$interest_income', '$sale_expense', '$other_income','$result', '$branch', NOW())";
 
-		$query = mysqli_query($ProfDB, $sql) or die("Error:".mysqli_error($ProfDB));
+		$query = mysqli_query($con, $sql) or die("Error:".mysqli_error($con));
 
 		if($query)
 		{

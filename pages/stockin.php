@@ -1,58 +1,92 @@
 <?php session_start();
+
 if(empty($_SESSION['id'])):
 header('Location:../index.php');
 endif;
+
 if(empty($_SESSION['branch'])):
 header('Location:../index.php');
 endif;
+
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Stock-In | <?php include('../dist/includes/title.php');?></title>
-    <!-- Tell the browser to be responsive to screen width -->
+    <title>Stock-In | <?php include('../dist/includes/title.php'); ?></title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
+
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="../plugins/select2/select2.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-    <style>
+    <style type="text/css">
       
+      .btn-back
+      {
+          background: #00a65a;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+
+      }
+
+      .btn-back:hover
+      {
+         background: #fff;
+         color: #00a65a;
+         border: 1px solid #00a65a;
+      }
+
+      input[type="text"]
+      {
+        border: 1px solid #00a65a;
+      }
+
+     .box
+     {
+        border-top: 4px solid #00a65a;
+        border-left: 4px solid #e3e3e3; 
+        border-right: 4px solid #e3e3e3; 
+        border-bottom: 4px solid #e3e3e3; 
+     }
+
+   
+
+       .content-cus
+    {
+      position: relative;
+      top: 30px;
+    }
+
+
     </style>
  </head>
-  <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
   <body class="hold-transition skin-<?php echo $_SESSION['skin'];?> layout-top-nav">
     <div class="wrapper">
       <?php include('../dist/includes/header.php');?>
-      <!-- Full Width Column -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background: #fff;">
         <div class="container">
-          <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              <a class="btn btn-lg btn-warning" href="home.php">Back</a>
-              
+              <a class="btn-back" href="home.php">Back</a>
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-              <li class="active">Stock</li>
+              <li class="active">Stock In</li>
             </ol>
           </section>
 
           <!-- Main content -->
-          <section class="content">
+          <section class="content content-cus">
             <div class="row">
 	           <div class="col-md-4">
-              <div class="box box-primary">
+              <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Stock-in Products</h3>
+                  <h3 class="box-title">Stock-In Products</h3>
                 </div>
                 <div class="box-body">
                   <!-- Date range -->
@@ -60,51 +94,104 @@ endif;
   
                   <div class="form-group">
                     <label for="date">Product Name</label>
-                    <div class="input-group col-md-12">
-                      <select class="form-control select2" name="prod_name" required>
+                    <div class="input-group col-md-12 select">
+                    <select class="form-control select2" id="standard-select" name="prod_name" required>
                       <?php
-            			 include('../dist/includes/dbcon.php');
-            				$query2=mysqli_query($con,"select * from product where branch_id='$branch' order by prod_name")or die(mysqli_error());
-            				  while($row=mysqli_fetch_array($query2)){
-            		      ?>
-            				    <option value="<?php echo $row['prod_id'];?>"><?php echo $row['prod_name'];?></option>
-		                <?php }?>
+
+            			     include('../dist/includes/dbcon.php');
+            				   $query2 = mysqli_query($con,"select * from product where branch_id='$branch' order by prod_name")or die(mysqli_error());
+            				    while($row = mysqli_fetch_array($query2))
+                        {
+
+            		       ?>
+
+            				    <option value="<?php echo $row['prod_id'];?>"><?php echo $row['prod_name'];?>    
+                        </option>
+
+		                <?php } ?>
                     </select>
-                    </div><!-- /.input group -->
-                  </div><!-- /.form group -->
+
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="date">Supplier</label>
+                    <div class="input-group col-md-12 select">
+                    <select class="form-control select2" id="standard-select" name="supplier_name" required>
+                      <?php
+
+                       include('../dist/includes/dbcon.php');
+                       $sel_sup = mysqli_query($con,"select * from supplier")or die(mysqli_error());
+                        while($row_sup = mysqli_fetch_array($sel_sup))
+                        {
+
+                       ?>
+
+                        <option value="<?php echo $row_sup['supplier_id'];?>">
+                          <?php echo $row_sup['supplier_name'];?>    
+                        </option>
+
+                    <?php } ?>
+                    </select>
+
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="date">Brand Name</label>
+                    <div class="input-group col-md-12 select">
+                    <select class="form-control select2" id="standard-select" name="brand_name" required>
+                      <?php
+
+                       include('../dist/includes/dbcon.php');
+                       $sel_brand = mysqli_query($con,"select * from brands")or die(mysqli_error());
+                        while($row_brand = mysqli_fetch_array($sel_brand))
+                        {
+
+                       ?>
+
+                        <option value="<?php echo $row_brand['brand_id'];?>"><?php echo $row_brand['brand_name'];?>    
+                        </option>
+
+                    <?php } ?>
+                    </select>
+
+                    </div>
+                  </div>
 		  
                   <div class="form-group">
                     <label for="date">Quantity</label>
                     <div class="input-group col-md-12">
                       <input type="text" class="form-control pull-right" id="date" name="qty" placeholder="Quantity" required>
-                    </div><!-- /.input group -->
-                  </div><!-- /.form group -->
+                    </div>
+                  </div>
 
 
                   <div class="form-group">
-                    <label for="date">Cost Per Product</label>
+                    <label for="date">Cost Per Product (If retail state retail price and wholesale otherwise)</label>
                     <div class="input-group col-md-12">
                       <input type="text" class="form-control pull-right" id="date" name="cost_per_product" placeholder="Product Cost" required>
-                    </div><!-- /.input group -->
-                  </div><!-- /.form group -->
+                    </div>
+                  </div>
                 
                   <div class="form-group">
                     <div class="input-group">
-                      <button class="btn btn-primary" id="daterange-btn" name="">
+                      <button type="submit" class="btn-back" id="daterange-btn" name="">
                         Save
                       </button>
-					             <button type="reset" class="btn" id="daterange-btn">
+					             <button type="reset" class="btn-back" id="daterange-btn">
                         Clear
                       </button>
                     </div>
-                  </div><!-- /.form group -->
+                  </div>
 				          </form>	
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-            </div><!-- /.col (right) -->
+                </div>
+              </div>
+            </div>
             
             <div class="col-xs-8">
-              <div class="box box-primary">
+              <div class="box">
     
                 <div class="box-header">
                   <h3 class="box-title">Product Stock-In List</h3>
@@ -116,82 +203,63 @@ endif;
                         <th>Product Name</th>
                         <th>Qty</th>
         				        <th>Supplier</th>
+                        <th>Brand</th>
                         <th>Cost Per Product</th>
                         <th>Total Cost</th>
         				        <th>Date Delivered</th>
                       </tr>
                     </thead>
                     <tbody>
-<?php
-		$branch=$_SESSION['branch'];
-		$query=mysqli_query($con,"select * from stockin natural join product natural join supplier where branch_id='$branch' order by date desc")or die(mysqli_error());
-		while($row=mysqli_fetch_array($query)){
-		
-?>
+                    <?php
+                    		
+                        $branch = $_SESSION['branch'];
+                    		
+                        $sel_stock = "SELECT * FROM stockin WHERE branch_id = '$branch'";
+                        $run_stock = mysqli_query($con, $sel_stock);
+                    		
+                        while($row = mysqli_fetch_array($run_stock))
+                        {
+
+                            $prod_id     = $row['prod_id'];
+                            $supplier_id = $row['supplier_id'];
+                            $brand_id   = $row['brand_id'];
+
+                            // Get Product
+                            $sel_prod = "SELECT * FROM product WHERE prod_id = '$prod_id'";
+                            $run_prod = mysqli_query($con, $sel_prod);
+                            $row_prod = mysqli_fetch_array($run_prod);
+                            $product_name = $row_prod['prod_name'];
+
+                            // Get Supplier
+                            $sel_sup = "SELECT * FROM supplier WHERE supplier_id = '$supplier_id'";
+                            $run_sup = mysqli_query($con, $sel_sup);
+                            $row_sup = mysqli_fetch_array($run_sup);
+                            $supplier_name = $row_sup['supplier_name'];
+
+                            // Get Supplier
+                            $sel_brand = "SELECT * FROM brands WHERE brand_id = '$brand_id'";
+                            $run_brand = mysqli_query($con, $sel_brand);
+                            $row_brand = mysqli_fetch_array($run_brand);
+                            $brand_name = $row_brand['brand_name'];
+                    		
+                    ?>
                       <tr>
-                        <td><?php echo $row['prod_name'];?></td>
-                        <td><?php echo $row['qty'];?></td>
-            						<td><?php echo $row['supplier_name'];?></td>
+                        <td><?php echo $product_name; ?></td>
+                        <td><?php echo $row['qty']; ?></td>
+            						<td><?php echo $supplier_name; ?></td>
+                        <td><?php echo $brand_name;?></td>
                         <td>₵<?php echo number_format($row['cost_per_product'],2);?></td>
                         <td>₵<?php echo number_format($row['qty']*$row['cost_per_product'],2);?></td>
             						<td><?php echo $row['date'];?></td>
-                        <td>
-        <a href="#delete<?php echo $row['stockin_id'];?>" data-target="#delete<?php echo $row['stockin_id'];?>" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-trash text-red"></i></a>
-            </td>
-              </tr>
-
-  
-
-
-<!-- Delete Brand Modal -->
- <div id="delete<?php echo $row['stockin_id'];?>" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog">
-              <div class="modal-content" style="height:auto">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Delete Stock</h4>
-              </div>
-              <div class="modal-body">
-              <form class="form-horizontal" method="post" action="stockin_del.php">
-             
-                  <input type="hidden" class="form-control" name="stockin_id" value="<?php echo $row['stockin_id'];?>" required> 
-
-
-                  <input type="hidden" class="form-control" name="pid" value="<?php echo $row['pid'];?>" required> 
-
-                  <input type="hidden" class="form-control" name="prod_id" value="<?php echo $row['prod_id'];?>" required> 
-                  
-                  <input type="hidden" class="form-control" id="name" name="qty" value="<?php echo $row['qty'];?>" required>  
-
-                     <input type="hidden" class="form-control" id="name" name="prod_name" value="<?php echo $row['prod_name'];?>" required>  
-
-                  
-                      <p>Are you sure you want to remove Stock?</p>
-              
-                    </div><br>
-                    <div class="modal-footer">
-                      <button type="submit" name="delete" class="btn btn-danger" >
-                      <a href="delete<?php echo $row['stockin_id'];?>" style="color: #ffffff;">
-                          Delete </a></button>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-              </form>
-            </div>
-        </div><!--end of modal-dialog-->
- </div>
-
-
-   
-
-                   
-<?php }?>					  
+                        </tr>                   
+                    <?php } ?>					  
                     </tbody>
                     <tfoot>
                       <tr>
                         <th>Product Name</th>
                         <th>Qty</th>
                         <th>Supplier</th>
+                        <th>Brand</th>
                         <th>Cost Per Product</th>
                         <th>Total Cost</th>
                         <th>Date Delivered</th> 
@@ -206,6 +274,11 @@ endif;
       </div><!-- /.content-wrapper -->
       <?php include('../dist/includes/footer.php');?>
     </div><!-- ./wrapper -->
+
+
+
+
+
 
     <!-- jQuery 2.1.4 -->
     <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>

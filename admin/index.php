@@ -30,7 +30,7 @@
 
                 <div>
                   <h1><i class="fa fa-paw"></i> Cwesical Enterprise </h1>
-                  <p>©2019 | CodeitSoft Technology | All Rights Reserved </p>
+                  <p>© 2021 | CodeitSoft Technology | All Rights Reserved </p>
                 </div>
               </div>
             </form>

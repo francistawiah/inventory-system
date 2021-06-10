@@ -1,117 +1,192 @@
-<?php session_start();
-if(empty($_SESSION['id'])):
-header('Location:../index.php');
-endif;
+
+<?php 
+      session_start();
+      if(empty($_SESSION['id'])):
+      header('Location:../index.php');
+      endif;
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Product | <?php include('../dist/includes/title.php');?></title>
-    <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+
     <style>
       
+      .btn-back
+      {
+          background: #00a65a;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+
+      }
+
+
+      .btn-back:hover
+      {
+         background: #fff;
+         color: #00a65a;
+         border: 1px solid #00a65a;
+      }
+
+      .btn-add
+      {
+          background: #00a65a;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+      }
+
+    .box
+     {
+         border-top: 5px solid #00a65a;
+        border-left: 4px solid #e3e3e3; 
+        border-right: 4px solid #e3e3e3; 
+        border-bottom: 4px solid #e3e3e3; 
+     }
+
+     .select2
+     {
+       border: 1px solid #00a65a;
+     }
+
+    .content-cus
+    {
+      position: relative;
+      top: 30px;
+      margin-bottom: 30px;
+    }
     </style>
  </head>
-  <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
   <body class="hold-transition skin-<?php echo $_SESSION['skin'];?> layout-top-nav">
     <div class="wrapper">
       <?php include('../dist/includes/header.php');?>
-      <!-- Full Width Column -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background: #fff;">
         <div class="container">
-          <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              <a class="btn btn-lg btn-warning" href="home.php">Back</a>
-              <a class="btn btn-lg btn-primary" href="#add" data-target="#add" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-plus text-blue"></i></a>
+              <a class="btn-back" href="home.php">Back</a>
+              <a class="btn-add" href="#add" data-target="#add" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-plus text-white"></i> Add New Product </a>
             </h1>
             <ol class="breadcrumb">
-              <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+              <li><a href="home.php"><i class="fa fa-dashboard"></i> Home</a></li>
               <li class="active">Product</li>
             </ol>
           </section>
 
           <!-- Main content -->
-          <section class="content">
+          <section class="content content-cus">
             <div class="row">
-	     
-            
             <div class="col-xs-12">
-              <div class="box box-primary">
-    
+              <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Product List</h3>
-                </div><!-- /.box-header -->
+                </div>
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
-                        <th>Product Name</th>
+                        <th>Product</th>
 						            <th>Supplier</th>
-                        <th>Quantity</th>
-                        <th>Quantity Status</th>
-            						<th>Price</th>
                         <th>Brand</th>
-            						<th>Category</th>
-									      <th>Barcode</th>
-            						<th>Reorder</th>
+                        <th>Category</th>
+                        <th>Total Qty</th>
+                        <th>Qty Left</th>
+                        <th>Qty Status</th>
+            			      <th>Price</th>
+                        <th>Total Amt</th>
+                        <th>Profit Margin</th>
+                        <th>Profit</th>
                         <th>Product Status</th>
                         <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
-<?php
+                   <?php
 		
-		$query=mysqli_query($con,"SELECT * FROM product JOIN supplier USING(supplier_id) JOIN  brands USING(brand_id) JOIN category USING(cat_id) WHERE branch_id='$branch' ORDER BY prod_name")or die(mysqli_error());
-		while($row=mysqli_fetch_array($query)){
-		
-?>
+              		$query = mysqli_query($con,"SELECT * FROM product JOIN supplier USING(supplier_id) JOIN brands USING(brand_id) JOIN category USING(cat_id) WHERE branch_id = '$branch' ORDER BY prod_name")or die(mysqli_error());
+              		
+                  while($row = mysqli_fetch_array($query))
+                  {
+                      $prod_id    = $row['prod_id'];
+                      $prod_price = $row['prod_price'];
+                      $reorder    = $row['reorder'];
+
+                      // Get Product From Stock
+                      // Summation of the total qty through stockin on the same product
+                      $get_stock_prod = "SELECT * FROM stockin WHERE prod_id = '$prod_id'";
+                      $run_stock_prod = mysqli_query($con, $get_stock_prod);
+
+                      $sum_qty = 0; 
+                      
+                      while($row_sp = mysqli_fetch_array($run_stock_prod))
+                      {
+                         $sum_qty += $row_sp['qty'];
+                         $cpp         = $row_sp['cost_per_product'];
+                         $stock_qty   = $row_sp['qty'];
+                         // Total Stock qty by Selling Price = Total Selling Price
+                         $total_price = $sum_qty * $prod_price;
+                         // Total Stock qty by Cost price = Total Cost price from supplier 
+                         $total_stock = $cpp * $sum_qty;
+
+                      }
+                      
+                      ?>
+
                       <tr>
                         <td><?php echo $row['prod_name'];?></td>
 						            <td><?php echo $row['supplier_name'];?></td>
+                        <td><?php echo $row['brand_name'];?></td>
+                        <td><?php echo $row['cat_name'];?></td>
+                        <td><?php echo $sum_qty; ?></td>
                         <td><?php echo $row['prod_qty']; ?></td>
                         <td>
                         <?php 
                        
-                        if ($row ['prod_qty'] < 5)
+                        if ($row['prod_qty'] <= $reorder)
                         {
 
-                          echo "<span class='badge bg-red'>Low</span>";
-  
+                          echo "<span class='badge bg-red'>Low Stock</span>";
+
+                        }
+                        elseif ($row['prod_qty'] == 0) 
+                        {
+                          echo "<span class='badge bg-red'>Stock-Out</span>";                                                      
                         }
                         else
                         {
-                          echo "<span class='badge bg-green'>High</span>";
+                          echo "<span class='badge bg-green'>In-Stock</span>";
                         }
 
-
-                        ?></td>
-            						<td>₵<?php echo number_format($row['prod_price'],2);?></td>
-                        <td><?php echo $row['brand_name'];?></td>
-            						<td><?php echo $row['cat_name'];?></td>
-									     <td><?php echo $row['barcode'];?></td>
-            						<td><?php echo $row['reorder'];?></td>
-                        <td><?php //echo $row['prod_status'];
+                        ?>
+                        </td>
+            			      <td>₵<?php echo number_format($row['prod_price'],2);?></td>
+                        <td>₵<?php echo $total_price; ?></td>
+                        <td>₵<?php echo $prod_price - $cpp; ?></td>
+                        <td>₵<?php echo $total_price - $total_stock; ?></td>
+									      <!--<td><?php  echo $row['barcode'];?></td> -->
+            						<!--<td><?php echo $row['reorder'];?></td>-->
+                        <td>
+                          <?php 
                            
-                        if ($row['prod_status']=='Active') 
+                        if ($row['prod_status'] == 'Active') 
                         {
                             echo "<span class='badge bg-green'>Active</span>";
                          }
                          else
                          {
                             echo "<span class='badge bg-red'>Inactive</span>";
-                          }
+                         }
                         ?>
                         </td>
                         <td>
@@ -246,10 +321,12 @@ endif;
                       <p>Are you sure you want to remove Product?</p>
               
                     </div><br>
-                    <div class="modal-footer">
-                      <button type="submit" name="delete" class="btn btn-danger" >
+                   <div class="modal-footer">
+                     
                       <a href="delete<?php echo $row['prod_id'];?>" style="color: #ffffff;">
-                          Delete </a></button>
+                           <button type="submit" name="delete" class="btn btn-danger" >
+                          Delete </button>
+                    </a>
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
               </form>
@@ -264,22 +341,24 @@ endif;
                     </tbody>
                     <tfoot>
                       <tr>
-                        <th>Product Name</th>
-						            <th>Supplier</th>
-                        <th>Quantity</th>
-                        <th>Quantity Status</th>
-            						<th>Price</th>
+                        <th>Product</th>
+                        <th>Supplier</th>
                         <th>Brand</th>
-            						<th>Category</th>
-									      <th>Barcode</th>
-            						<th>Reorder</th>
+                        <th>Category</th>
+                        <th>Total Qty</th>
+                        <th>Qty Left</th>
+                        <th>Qty Status</th>
+                        <th>Price</th>
+                        <th>Total Amt</th>
+                        <th>Profit Margin</th>
+                        <th>Profit</th>
                         <th>Product Status</th>
                         <th>Action</th>
                       </tr>					  
                     </tfoot>
                   </table>
-                </div><!-- /.box-body -->
-            </div><!-- /.col -->
+                </div>
+            </div>
           </div><!-- /.row -->
           </section><!-- /.content -->
         </div><!-- /.container -->
@@ -313,8 +392,8 @@ endif;
                     <select class="form-control select2" style="width: 100%;" name="supplier" required>
                       <?php
                   
-                    $query2=mysqli_query($con,"select * from supplier")or die(mysqli_error());
-                      while($row2=mysqli_fetch_array($query2)){
+                    $query2 = mysqli_query($con,"select * from supplier")or die(mysqli_error());
+                      while($row2 = mysqli_fetch_array($query2)){
                       ?>
                         <option value="<?php echo $row2['supplier_id'];?>"><?php echo $row2['supplier_name'];?></option>
                       <?php }?>
@@ -368,7 +447,7 @@ endif;
               <div class="form-group">
                 <label class="control-label col-lg-3" for="price">Reorder</label>
                 <div class="col-lg-9">
-                  <input type="number" class="form-control" id="price" name="reorder" placeholder="Reorder Point"  required>  
+                  <input type="number" class="form-control" id="price" name="reorder" placeholder="Reorder Point">  
                 </div>
               </div>
         
@@ -384,46 +463,17 @@ endif;
 
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Add Product</button>
               </div>
             </form>
             </div>
-        </div><!--end of modal-dialog-->
-      </div>
- <!--end of modal--> 
+        </div>
+      </div><!--end of modal--> 
+
+   
+       <?php include('../dist/includes/footer_links.php');?>
+   
 
 
- 
-
-
-    <!-- jQuery 2.1.4 -->
-    <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <!-- Bootstrap 3.3.5 -->
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <!-- SlimScroll -->
-    <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <!-- FastClick -->
-    <script src="../plugins/fastclick/fastclick.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="../dist/js/app.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="../dist/js/demo.js"></script>
-    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
-    
-    <script>
-      $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-          "paging": true,
-          "lengthChange": false,
-          "searching": false,
-          "ordering": true,
-          "info": true,
-          "autoWidth": false
-        });
-      });
-    </script>
-  </body>
-</html>
+  

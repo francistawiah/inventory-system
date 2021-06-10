@@ -1,14 +1,14 @@
 <?php
 
-	$db = mysqli_connect('localhost', 'root', '', 'inventory');
+	include('../dist/includes/dbcon.php');
 
 function ShowUsers()
 	{
-		global $db;
+		global $con;
 
 		$sql = "SELECT * FROM user WHERE status ='active'";
 
-		$query = mysqli_query($db, $sql)or die();
+		$query = mysqli_query($con, $sql)or die();
 
 		$count = mysqli_num_rows($query);
 
@@ -19,11 +19,11 @@ function ShowUsers()
 
 function ShowBrands()
 	{
-		global $db;
+		global $con;
 
 		$query = "SELECT * FROM brands WHERE brand_status ='active'";
 
-		$run = mysqli_query($db, $query);
+		$run = mysqli_query($con, $query);
 
 		$count_run = mysqli_num_rows($run);
 
@@ -34,11 +34,11 @@ function ShowBrands()
 
 function ShowCat()
 	{
-		global $db;
+		global $con;
 
 		$sql = "SELECT * FROM category WHERE cat_status ='active'";
 
-		$query = mysqli_query($db, $sql);
+		$query = mysqli_query($con, $sql);
 
 		$count = mysqli_num_rows($query);
 
@@ -48,11 +48,11 @@ function ShowCat()
 
 function ShowSupplier()
 	{
-		global $db;
+		global $con;
 
 		$sql = "SELECT * FROM supplier WHERE supplier_status ='active'";
 
-		$query = mysqli_query($db, $sql);
+		$query = mysqli_query($con, $sql);
 
 		$count = mysqli_num_rows($query);
 
@@ -62,11 +62,11 @@ function ShowSupplier()
 
 function ShowCust()
 	{
-		global $db;
+		global $con;
 
-		$sql = "SELECT * FROM customer WHERE cust_status ='active'";
+		$sql = "SELECT * FROM customer";
 
-		$query = mysqli_query($db, $sql);
+		$query = mysqli_query($con, $sql);
 
 		$count = mysqli_num_rows($query);
 
@@ -76,11 +76,11 @@ function ShowCust()
 
 function ShowProd()
 	{
-		global $db;
+		global $con;
 
 		$sql = "SELECT * FROM product WHERE prod_status ='active'";
 
-		$query = mysqli_query($db, $sql);
+		$query = mysqli_query($con, $sql);
 
 		$count = mysqli_num_rows($query);
 
@@ -91,11 +91,11 @@ function ShowProd()
 
 function ShowCred()
 	{
-		global $db;
+		global $con;
 
 		$sql = "SELECT * FROM creditors WHERE creditor_status ='active'";
 
-		$query = mysqli_query($db, $sql);
+		$query = mysqli_query($con, $sql);
 
 		$count = mysqli_num_rows($query);
 
@@ -106,10 +106,10 @@ function ShowCred()
 
 	function ShowDiscount()
 	{
-			global $db;
+			global $con;
 
             $query = "SELECT * FROM sales";
-            $sql   = mysqli_query($db, $query);
+            $sql   = mysqli_query($con, $query);
 
             $sum = 0;
 
@@ -124,16 +124,16 @@ function ShowCred()
 
 	function ShowSales()
 	{
-			global $db;
+			global $con;
 
-            $query = "SELECT * FROM sales_details"; 
-            $sql   = mysqli_query($db, $query);
+            $query = "SELECT * FROM sales"; 
+            $sql   = mysqli_query($con, $query);
 
             $sum = 0;
 
             while($num = mysqli_fetch_assoc($sql))
             {
-                $sum += $num['qty'] * $num['price'];
+                $sum += $num['cash_tendered'];
             }
         
         	echo "₵";
@@ -144,10 +144,10 @@ function ShowCred()
 
 	function ShowCreditorAmt()
 	{
-			global $db;
+			global $con;
 
             $query = "SELECT * FROM creditors";
-            $sql   = mysqli_query($db, $query);
+            $sql   = mysqli_query($con, $query);
 
             $sum = 0;
 
@@ -163,10 +163,10 @@ function ShowCred()
 
 	function ShowCreditorAmtPaid()
 	{
-			global $db;
+			global $con;
 
             $query = "SELECT * FROM creditors";
-            $sql   = mysqli_query($db, $query);
+            $sql   = mysqli_query($con, $query);
 
             $sum = 0;
 
@@ -181,10 +181,10 @@ function ShowCred()
 
 	function ShowCreditorAmtleft()
 	{
-			global $db;
+			global $con;
 
             $query = "SELECT * FROM creditors";
-            $sql   = mysqli_query($db, $query);
+            $sql   = mysqli_query($con, $query);
 
             $sum = 0;
 

@@ -1,13 +1,8 @@
 <?php
 
 
-	$con = mysqli_connect('localhost', 'root', '', 'inventory');
-
-	if(!$con)
-	{
-		die("Connection failed: " . mysqli_connect_error());
-	}
-
+	include('../dist/includes/dbcon.php');
+	
 	if(isset($_POST['delete']))
 	{
 		$id = $_POST['cust_id'];

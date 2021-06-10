@@ -1,8 +1,7 @@
 <?php
 
   
-  $connect = mysqli_connect('localhost', 'root', '', 'inventory');
-
+  include('../dist/includes/dbcon.php');
 
  $invent_error = array();
 
@@ -12,8 +11,8 @@
  if(isset($_POST['invent_admin']))
  {
 
-  $invent_name         = mysqli_real_escape_string($connect, $_POST['invent_name']);
-  $invent_password     = mysqli_real_escape_string($connect, $_POST['invent_password']);
+  $invent_name         = mysqli_real_escape_string($con, $_POST['invent_name']);
+  $invent_password     = mysqli_real_escape_string($con, $_POST['invent_password']);
 
   if(empty($invent_name) || empty($invent_password))
   {
@@ -32,13 +31,13 @@
   else
   {
     $sql ="SELECT * FROM `admin` WHERE username = '$invent_name'";
-    $result = $connect->query($sql)or die(mysqli_error());
+    $result = $con->query($sql)or die(mysqli_error());
 
     if($result->num_rows == 1)
     {
       $inventpassword = md5($invent_password);
       $mainSql = "SELECT * FROM `admin` WHERE username = '$invent_name' AND password = '$inventpassword'";
-      $mainResult = $connect->query($mainSql)or die(mysqli_error());
+      $mainResult = $con->query($mainSql)or die(mysqli_error());
 
       if($mainResult->num_rows == 1)
       {

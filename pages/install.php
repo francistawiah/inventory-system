@@ -13,32 +13,66 @@ endif;
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Installment | <?php include('../dist/includes/title.php');?></title>
-    <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-    <style>
+     <style>
+
+      .btn-back
+      {
+          background: #00a65a;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+
+      }
+
+      .btn-back:hover
+      {
+         background: #fff;
+         color: #00a65a;
+         border: 1px solid #00a65a;
+      }
+
+       .btn-add
+      {
+          background: #00a65a;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+      }
+
+
+    .box
+     {
+        border-top: 5px solid #00a65a;
+        border-left: 4px solid #e3e3e3; 
+        border-right: 4px solid #e3e3e3; 
+        border-bottom: 4px solid #e3e3e3; 
+     }
+
+    .content-cus
+    {
+      position: relative;
+      top: 30px;
+      margin-bottom: 40px;
+    }
       
     </style>
  </head>
-  <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
   <body class="hold-transition skin-<?php echo $_SESSION['skin'];?> layout-top-nav">
     <div class="wrapper">
       <?php include('../dist/includes/header.php');?>
-      <!-- Full Width Column -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background: #fff;">
         <div class="container-fluid">
-          <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              <a class="btn btn-lg btn-warning" href="home.php">Back</a>
-              <a class="btn btn-lg btn-primary" href="#add" data-target="#add" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-plus text-blue"></i></a>
+              <a class="btn-back" href="home.php">Back</a>
+              <a class="btn-add" href="#add" data-target="#add" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-plus text-white"></i> Add New Installer</a>
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -47,16 +81,13 @@ endif;
           </section>
 
           <!-- Main content -->
-          <section class="content">
+          <section class="content content-cus">
             <div class="row">
-       
-            
             <div class="col-xs-12">
-              <div class="box box-primary">
-    
+              <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Installment List</h3>
-                </div><!-- /.box-header -->
+                </div>
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
@@ -68,7 +99,7 @@ endif;
                         <th>Product Name</th>
                         <th>Price</th>
                         <th>Qty</th>
-                        <th>Total Amountt</th>
+                        <th>Total Amount</th>
                         <th>Amount Paid</th>
                         <th>Balance</th>
                         <th>Status</th>
@@ -77,17 +108,17 @@ endif;
                       </tr>
                     </thead>
                     <tbody>
-<?php
-    
+                      <?php
+                          
 
-    $query=mysqli_query($con,"SELECT * FROM installment where branch_id ='$branch' ORDER BY install_id")or die(mysqli_error());
+                          $query = mysqli_query($con,"SELECT * FROM installment where branch_id = '$branch' ORDER BY install_id")or die(mysqli_error());
 
-    if(mysqli_num_rows($query) > 0)
-    {
-      while($row=mysqli_fetch_array($query))      
-      {
-    
-?>
+                          if(mysqli_num_rows($query) > 0)
+                          {
+                            while($row = mysqli_fetch_array($query))      
+                            {
+                          
+                      ?>
                       <tr>                     
                         <td><?php echo $row['last_name'];?></td>
                         <td><?php echo $row['first_name'];?></td>
@@ -231,9 +262,10 @@ endif;
               
                     </div><br>
                     <div class="modal-footer">
-                      <button type="submit" name="delete" class="btn btn-danger" >
+                      
                       <a href="delete<?php echo $row['install_id'];?>" style="color: #ffffff;">
-                          Delete </a></button>
+                          <button type="submit" name="delete" class="btn btn-danger" >
+                          Delete </button></a>
                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
               </form>

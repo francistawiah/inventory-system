@@ -15,16 +15,57 @@ endif;
     <title>Creditor | <?php include('../dist/includes/title.php');?></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-    <style>
+   <style>
       
+      .btn-back
+      {
+          background: #00a65a;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+
+      }
+
+
+      .btn-back:hover
+      {
+         background: #fff;
+         color: #00a65a;
+         border: 1px solid #00a65a;
+      }
+
+      .btn-add
+      {
+          background: #00a65a;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+      }
+
+    .box
+     {
+        border-top: 5px solid #00a65a;
+        border-left: 4px solid #e3e3e3; 
+        border-right: 4px solid #e3e3e3; 
+        border-bottom: 4px solid #e3e3e3; 
+     }
+
+     .select2
+     {
+       border: 1px solid #00a65a;
+     }
+
+    .content-cus
+    {
+      position: relative;
+      top: 30px;
+    }
     </style>
  </head>
   <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
@@ -32,13 +73,13 @@ endif;
     <div class="wrapper">
       <?php include('../dist/includes/header.php');?>
       <!-- Full Width Column -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background: #fff;">
         <div class="container-fluid">
           <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              <a class="btn btn-lg btn-warning" href="home.php">Back</a>
-              <a class="btn btn-lg btn-primary" href="#add" data-target="#add" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-plus text-blue"></i></a>
+              <a class="btn-back" href="home.php">Back</a>
+              <a class="btn-add" href="#add" data-target="#add" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-plus text-white"></i> Add New Creditor</a>
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -47,16 +88,13 @@ endif;
           </section>
 
           <!-- Main content -->
-          <section class="content">
+          <section class="content content-cus">
             <div class="row">
-       
-            
             <div class="col-xs-12">
-              <div class="box box-primary">
-    
+              <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Creditor List</h3>
-                </div><!-- /.box-header -->
+                </div>
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
@@ -80,21 +118,20 @@ endif;
                       </tr>
                     </thead>
                     <tbody>
-<?php
-    
+                    <?php
+                        
+                        $query = mysqli_query($con,"SELECT * FROM creditors ORDER BY creditor_id")or die(mysqli_error());
 
-    $query=mysqli_query($con,"SELECT * FROM creditors ORDER BY creditor_id")or die(mysqli_error());
+                        if(mysqli_num_rows($query) > 0)
+                        {
+                          while($row=mysqli_fetch_array($query))      
+                          {
 
-    if(mysqli_num_rows($query) > 0)
-    {
-      while($row=mysqli_fetch_array($query))      
-      {
-
-        $grand = $row['product_price']*$row['quantity'];
-        $interest = $grand * 0.3;
-        $left = $grand - $row['down_paymt'];
-    
-?>
+                            $grand = $row['product_price']*$row['quantity'];
+                            $interest = $grand * 0.3;
+                            $left = $grand - $row['down_paymt'];
+                        
+                    ?>
                       <tr>                     
                         <td><?php echo $row['creditor_name'];?></td>
                         <td><?php echo $row['contact'];?></td>
@@ -164,16 +201,14 @@ endif;
                           }
 
                         ?></td>
-                        <td>
-        <a href="#update<?php echo $row['creditor_id'];?>" data-target="#update<?php echo $row['creditor_id'];?>" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-edit text-blue"></i></a>
+                 <td>
+                    <a href="#update<?php echo $row['creditor_id'];?>" data-target="#update<?php echo $row['creditor_id'];?>" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-edit text-blue"></i></a>
 
-         <a href="#delete<?php echo $row['creditor_id'];?>" data-target="#delete<?php echo $row['creditor_id'];?>" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-trash text-red"></i></a>
-      
-            </td>
-                      </tr>
+                     <a href="#delete<?php echo $row['creditor_id'];?>" data-target="#delete<?php echo $row['creditor_id'];?>" data-toggle="modal" style="color:#fff;" class="small-box-footer"><i class="glyphicon glyphicon-trash text-red"></i></a>
+               </td>
+            </tr>
 
-
-                <!-- Update Creditor Modal -->      
+          <!-- Update Creditor Modal -->      
       <div id="update<?php echo $row['creditor_id'];?>" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
           <div class="modal-content" style="height:auto">
@@ -183,52 +218,51 @@ endif;
                 <h4 class="modal-title">Update Creditor Details</h4>
               </div>
               <div class="modal-body">
-        <form class="form-horizontal" method="post" action="creditor_update.php" enctype='multipart/form-data'>
+
+            <form class="form-horizontal" method="post" action="creditor_update.php" enctype='multipart/form-data'>
                 
-        <div class="form-group">
-          <label class="control-label col-lg-3">Creditor Name</label>
-          <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
-            <input type="text" class="form-control" name="cred_name" value="<?php echo $row['creditor_name'];?>" required>  
-          </div>
-        </div> 
+            <div class="form-group">
+              <label class="control-label col-lg-3">Creditor Name</label>
+              <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
+                <input type="text" class="form-control" name="cred_name" value="<?php echo $row['creditor_name'];?>" required>  
+              </div>
+            </div> 
       
-        <div class="form-group">
-          <label class="control-label col-lg-3">Contact</label>
-          <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
-            <input type="number" class="form-control" name="contact" value="<?php echo $row['contact'];?>" required>  
-          </div>
-        </div> 
+            <div class="form-group">
+              <label class="control-label col-lg-3">Contact</label>
+              <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
+                <input type="number" class="form-control" name="contact" value="<?php echo $row['contact'];?>" required>  
+              </div>
+            </div> 
 
-         <div class="form-group">
-          <label class="control-label col-lg-3">Product Name</label>
-          <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
-            <input type="text" class="form-control" name="pro_name" value="<?php echo $row['product_name'];?>" required>  
-          </div>
-        </div> 
+           <div class="form-group">
+            <label class="control-label col-lg-3">Product Name</label>
+            <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
+              <input type="text" class="form-control" name="pro_name" value="<?php echo $row['product_name'];?>" required>  
+            </div>
+          </div> 
 
+           <div class="form-group">
+            <label class="control-label col-lg-3">Product price</label>
+            <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
+              <input type="text" class="form-control" name="price" value="<?php echo $row['product_price'];?>" required>  
+            </div>
+          </div> 
 
-         <div class="form-group">
-          <label class="control-label col-lg-3">Product price</label>
-          <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
-            <input type="text" class="form-control" name="price" value="<?php echo $row['product_price'];?>" required>  
-          </div>
-        </div> 
+           <div class="form-group">
+            <label class="control-label col-lg-3">Quantity</label>
+            <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
+              <input type="number" class="form-control" name="qty" value="<?php echo $row['quantity'];?>" required>  
+            </div>
+          </div> 
 
-         <div class="form-group">
-          <label class="control-label col-lg-3">Quantity</label>
-          <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
-            <input type="number" class="form-control" name="qty" value="<?php echo $row['quantity'];?>" required>  
-          </div>
-        </div> 
-
-         <div class="form-group">
+            <div class="form-group">
               <label class="control-label col-lg-3">Terms</label>
                <div class="col-lg-9">
                  <input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
-                <input type="text" class="form-control" name="terms" value="<?php echo $row['term'];?>" required>  
-                
+                <input type="text" class="form-control" name="terms" value="<?php echo $row['term'];?>" required>    
                  </div>
-              </div><!-- /.form group -->
+              </div>
 
               <div class="form-group">
               <label class="control-label col-lg-3">Payable For</label>
@@ -236,15 +270,15 @@ endif;
                <input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
                 <input type="number" class="form-control" name="payable_for" value="<?php echo $row['payable_for'];?>" required> 
               </div>
-            </div><!-- /.form group -->
+            </div>
 
 
-         <div class="form-group">
-          <label class="control-label col-lg-3">Due Amount</label>
-          <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
-            <input type="text" class="form-control" name="due" value="<?php echo $row['quantity']*$row['product_price'];?>" required>  
-          </div>
-        </div> 
+           <div class="form-group">
+            <label class="control-label col-lg-3">Due Amount</label>
+            <div class="col-lg-9"><input type="hidden" class="form-control" name="creditor_id" value="<?php echo $row['creditor_id'];?>" required>  
+              <input type="text" class="form-control" name="due" value="<?php echo $row['quantity']*$row['product_price'];?>" required>  
+            </div>
+          </div> 
 
         <div class="form-group">
           <label class="control-label col-lg-3">Down Payment</label>
@@ -265,16 +299,16 @@ endif;
 
               </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="submit" class="btn btn-primary">Save changes</button>
               </div>
             </form>
             </div>
-      
-        </div><!--end of modal-dialog-->
- </div>
+           </div>
+           </div>
  <!--end of modal-->                    
 
+ 
  <!-- Delete Creditor Modal -->
  <div id="delete<?php echo $row['creditor_id'];?>" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
             <div class="modal-dialog">
@@ -300,11 +334,8 @@ endif;
                     </div>
               </form>
             </div>
-      
-        </div><!--end of modal-dialog-->
- </div>
-
-
+         </div>
+      </div>
  <!--end of modal-->  
 
 <?php } }?>           
@@ -329,28 +360,27 @@ endif;
                       </tr>           
                     </tfoot>
                   </table>
-                </div><!-- /.box-body -->
- 
-            </div><!-- /.col -->
-          </div><!-- /.row -->
-          </section><!-- /.content -->
-        </div><!-- /.container -->
-      </div><!-- /.content-wrapper -->
+                </div>
+            </div>
+          </div>
+          </section>
+        </div>
+      </div>
       <?php include('../dist/includes/footer.php');?>
-    </div><!-- ./wrapper -->
-
+    </div>
 
 
 <!-- Add Creditor Modal -->
 <div id="add" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
   <div class="modal-dialog">
     <div class="modal-content" style="height:auto">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Add New Creditor</h4>
-              </div>
-              <div class="modal-body">
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span></button>
+          <h4 class="modal-title">Add New Creditor</h4>
+        </div>
+        <div class="modal-body">
+        
         <form class="form-horizontal" method="post" action="creditor_add.php" enctype='multipart/form-data'>
                 
         <div class="form-group">
@@ -360,8 +390,6 @@ endif;
           </div>
         </div> 
     
-       
-
          <div class="form-group">
           <label class="control-label col-lg-3">Contact</label>
           <div class="col-lg-9">
@@ -369,9 +397,9 @@ endif;
           </div>
         </div>
 
-           <div class="form-group">
-          <label class="control-label col-lg-3">Product Name</label>
-          <div class="col-lg-9">
+          <div class="form-group">
+           <label class="control-label col-lg-3">Product Name</label>
+            <div class="col-lg-9">
             <input type="text" class="form-control" name="pro_name" placeholder="Product Name" required>  
           </div>
         </div>
@@ -397,24 +425,22 @@ endif;
           </div>
         </div>
 
-         
-
-              <div class="form-group">
-              <label class="control-label col-lg-3">Terms</label>
-               <div class="col-lg-9">
-                <select class="form-control select2" name="terms" tabindex="1" required>  
+          <div class="form-group">
+           <label class="control-label col-lg-3">Terms</label>
+            <div class="col-lg-9">
+              <select class="form-control select2" name="terms" required>  
                     <option value="--Select--"></option>
-                    <option>Monthly</option>
-                    <option>Weekly</option>
-                    <option>Daily</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Daily">Daily</option>
                 </select>
-                 </div>
-              </div><!-- /.form group -->
+                </div>
+              </div>
 
               <div class="form-group">
               <label class="control-label col-lg-3">Payable For</label>
                <div class="col-lg-9">
-                <select class="form-control select2" name="payable_for" tabindex="1" required>  
+                <select class="form-control select2" name="payable_for" required>  
                     <option value="--Select--"></option>
                      <option value="1">1 month</option>
                     <option value="2">2 months</option>
@@ -424,7 +450,7 @@ endif;
                     <option value="6">6 months</option>
                 </select>
                  </div>
-              </div><!-- /.form group -->
+              </div>
 
               <div class="form-group">
               <label class="control-label col-lg-3" for="price">Status</label>
@@ -438,57 +464,19 @@ endif;
 
              </div>
               <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Save changes</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
               </div>
              </form>
-        </div><!--end of modal-dialog-->
+        </div>
  </div>
 </div>
 </div>
-
  <!--end of modal--> 
 
  
 
+  <?php include('../dist/includes/footer_links.php');?>
+   
 
 
-
-
-
-
-
-
-
-
-
-    <!-- jQuery 2.1.4 -->
-    <script src="../plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <!-- Bootstrap 3.3.5 -->
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
-    <!-- SlimScroll -->
-    <script src="../plugins/slimScroll/jquery.slimscroll.min.js"></script>
-    <!-- FastClick -->
-    <script src="../plugins/fastclick/fastclick.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="../dist/js/app.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="../dist/js/demo.js"></script>
-    <script src="../plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
-    
-    <script>
-      $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-          "paging": true,
-          "lengthChange": false,
-          "searching": false,
-          "ordering": true,
-          "info": true,
-          "autoWidth": false
-        });
-      });
-    </script>
-  </body>
-</html>

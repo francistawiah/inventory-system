@@ -1,7 +1,7 @@
 <?php
 
   
-  $conn = mysqli_connect('localhost', 'root', '', 'inventory');
+ include('../dist/includes/dbcon.php');
 
 
  $error = array();
@@ -31,13 +31,13 @@
   else
   {
     $query ="SELECT * FROM `admin` WHERE username = '$admin_name'";
-    $Result = $conn->query($query);
+    $Result = $con->query($query);
 
     if($Result->num_rows == 1)
     {
       $pass = md5($admin_pword);
       $MainSql = "SELECT * FROM `admin` WHERE username = '$admin_name' AND password = '$pass'";
-      $MainResult = $conn->query($MainSql);
+      $MainResult = $con->query($MainSql);
 
       if($MainResult->num_rows == 1)
       {

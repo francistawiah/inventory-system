@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-     $con = mysqli_connect('localhost', 'root', '', 'inventory');
+    include('../dist/includes/dbcon.php');
 
 
 if(isset($_POST['delete']))

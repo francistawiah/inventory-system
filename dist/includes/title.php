@@ -1,3 +1,3 @@
 <?php 
-	echo "Jamtay Enterprise";
+	echo "Dziks Commodities & Agrochemical Company Ltd.";
 ?>

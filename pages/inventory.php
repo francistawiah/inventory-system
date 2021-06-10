@@ -36,48 +36,87 @@ endif;
 		  }
 		  .box.box-primary {
 			  border-top:none !important;
-		  }
-		  
-          
+		  }   
       }
+
+      .btn-back
+      {
+          background: #00a65a;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+
+      }
+
+
+      .btn-back:hover
+      {
+         background: #fff;
+         color: #00a65a;
+         border: 1px solid #00a65a;
+      }
+
+      .btn-add
+      {
+          background: #00a65a;
+          padding: 10px;
+          border-radius: 5px;
+          color: #fff;
+          font-size: 15px;
+      }
+
+    .box
+     {
+         border-top: 5px solid #00a65a;
+        border-left: 4px solid #e3e3e3; 
+        border-right: 4px solid #e3e3e3; 
+        border-bottom: 4px solid #e3e3e3; 
+     }
+
+     .select2
+     {
+       border: 1px solid #00a65a;
+     }
+
+    .content-cus
+    {
+      position: relative;
+      top: 30px;
+      margin-bottom: 30px;
+    }
     </style>
  </head>
-  <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
   <body class="hold-transition skin-<?php echo $_SESSION['skin'];?> layout-top-nav">
     <div class="wrapper">
       <?php include('../dist/includes/header.php');
       include('../dist/includes/dbcon.php');
       ?>
-      <!-- Full Width Column -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background: #fff;">
         <div class="container">
-          <!-- Content Header (Page header) -->
+         
          
 
           <!-- Main content -->
-          <section class="content">
+          <section class="content content-cus">
             <div class="row">
-	    <div class="col-xs-12">
-              <div class="box box-primary">
-					
-              
-                <div class="box-body">
-				<?php
-include('../dist/includes/dbcon.php');
+	            <div class="col-xs-12">
+              <div class="box">
+              <div class="box-body">
+              <?php
+                  include('../dist/includes/dbcon.php');
 
-$branch=$_SESSION['branch'];
-    $query=mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error());
-  
-        $row=mysqli_fetch_array($query);
-        
-?>      
-                  <h5><b><?php echo $row['branch_name'];?></b> </h5>  
-                  <h6>Address: <?php echo $row['branch_address'];?></h6>
-                  <h6>Contact #: <?php echo $row['branch_contact'];?></h6>
-				  <h5><b>Product Inventory as of today, <?php echo date("M d, Y h:i a");?></b></h5>
-                  
-				  <a class = "btn btn-success btn-print" href = "" onclick = "window.print()"><i class ="glyphicon glyphicon-print"></i> Print</a>
-							<a class = "btn btn-primary btn-print" href = "home.php"><i class ="glyphicon glyphicon-arrow-left"></i> Back to Homepage</a>   
+                  $branch = $_SESSION['branch'];
+                  $query = mysqli_query($con,"select * from branch where branch_id='$branch'")or die(mysqli_error());
+                    
+                  $row = mysqli_fetch_array($query);
+                          
+                  ?>      
+                  <h5 style="font-size: 20px; color: #00a65a;"><b><?php echo $row['branch_name'];?></b> </h5>  
+                  <h6 style="font-size: 20px; color: #00a65a;">Address: <?php echo $row['branch_address'];?></h6>
+                  <h6 style="font-size: 20px; color: #00a65a;">Contact #: <?php echo $row['branch_contact'];?></h6>
+				  <h5 style="font-size: 20px; color: #00a65a;"><b>Product Inventory as of today, <?php echo date("M d, Y h:i a");?></b></h5>
+                    
 						
                   <table class="table table-bordered table-striped">
                     <thead>
@@ -93,14 +132,16 @@ $branch=$_SESSION['branch'];
                       </tr>
                     </thead>
                     <tbody>
-<?php
-		$branch=$_SESSION['branch'];
-		$query=mysqli_query($con,"select * from product natural join supplier where branch_id='$branch' order by prod_name")or die(mysqli_error());
-		$grand=0;
-		while($row=mysqli_fetch_array($query)){
-			$total=$row['prod_price']*$row['prod_qty'];
-			$grand+=$total;
-?>
+                    <?php
+                    		$branch = $_SESSION['branch'];
+                    		$query = mysqli_query($con,"select * from product natural join supplier where branch_id='$branch' order by prod_name")or die(mysqli_error());
+                    		$grand = 0;
+
+                    		while($row = mysqli_fetch_array($query))
+                        {
+                    			$total = $row['prod_price'] * $row['prod_qty'];
+                    			$grand += $total;
+                    ?>
                       <tr>
                         <td><?php echo $row['prod_name'];?></td>
                         <td><?php echo $row['supplier_name'];?></td>
@@ -134,12 +175,12 @@ $branch=$_SESSION['branch'];
                         <th></th>
                         <th></th>
                       </tr> 
-<?php
-    $id=$_SESSION['id'];
-    $query=mysqli_query($con,"select * from user where user_id='$id'")or die(mysqli_error($con));
-    $row=mysqli_fetch_array($query);
- 
-?>                      
+                      <?php
+                          $id = $_SESSION['id'];
+                          $query = mysqli_query($con,"select * from user where user_id='$id'")or die(mysqli_error($con));
+                          $row = mysqli_fetch_array($query);
+                       
+                      ?>                      
                       <tr>
                         <th><?php echo $row['name'];?></th>
                         <th></th>
@@ -148,6 +189,11 @@ $branch=$_SESSION['branch'];
                       </tr>  				  
                     </tfoot>
                   </table>
+                  <div style="margin-bottom: 30px; margin-top: 30px">
+                   <a class = "btn-back btn-print" href = "" onclick = "window.print()"><i class ="glyphicon glyphicon-print"></i> Print</a>
+                  <a class = "btn-back btn-print" href = "home.php"><i class ="glyphicon glyphicon-arrow-left"></i> Back to Homepage</a> 
+                </div>
+
                 </div><!-- /.box-body -->
 	            </div><!-- /.box -->
             </div><!-- /.col -->

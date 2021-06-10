@@ -1,7 +1,7 @@
 <?php
 
   
-  $connect = mysqli_connect('localhost', 'root', '', 'inventory');
+  include('../dist/includes/dbcon.php');
 
 
  $rec_error = array();
@@ -32,13 +32,13 @@
   else
   {
     $sql ="SELECT * FROM `admin` WHERE username = '$rec_name'";
-    $result = $connect->query($sql)or die(mysqli_error());
+    $result = $con->query($sql)or die(mysqli_error());
 
     if($result->num_rows == 1)
     {
       $Recpassword = md5($rec_password);
       $mainSql = "SELECT * FROM `admin` WHERE username = '$rec_name' AND password = '$Recpassword'";
-      $mainResult = $connect->query($mainSql)or die(mysqli_error());
+      $mainResult = $con->query($mainSql)or die(mysqli_error());
 
       if($mainResult->num_rows == 1)
       {

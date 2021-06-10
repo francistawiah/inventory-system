@@ -1,46 +1,159 @@
-<?php session_start();
+<?php 
+
+session_start();
+
 if(empty($_SESSION['id'])):
 header('Location:../index.php');
 endif;
+
 if(empty($_SESSION['branch'])):
 header('Location:../index.php');
 endif;
+
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Customer | <?php include('../dist/includes/title.php');?></title>
-    <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="../plugins/select2/select2.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
-    <style>
-      
-    </style>
  </head>
-  <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+
+ <style type="text/css">
+    
+    input[type="text"]
+    {
+       border: 2px solid #fff;
+    }  
+
+    .box
+    {
+      border: 4px solid #605ca8;
+      border-top: 4px solid #605ca8;
+      background: #605ca8;
+      border-radius: 10px;
+    }
+
+    .box-title
+    {
+      color: #fff;
+      padding-left: 30px;
+
+    }
+
+    .control-label
+    {
+      color: #fff;
+      padding-left: 30px;
+      padding-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .txt-input
+    {
+      position: relative;
+      left: 30px;
+    }
+
+    .btn-name
+    {
+       border: 2px solid #fff;
+       border-radius: 5px;
+       padding: 10px;
+       color: #605ca8;
+       background: #fff;
+       font-weight: 700;
+       margin-bottom: 30px;
+    }
+
+    .btn-name:hover
+    {
+      background: #605ca8;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    .c-name
+    {
+      color: #fff;
+      padding-top: 10px; 
+      font-size: 17px;
+      padding-left: 30px;
+      padding-bottom: 10px;
+    }
+
+    .select2
+    {
+       position: relative;
+       left: 30px;
+    }
+
+    .btn-search
+    {
+       border: 2px solid #fff;
+       border-radius: 5px;
+       padding: 10px;
+       margin-left: 30px;
+       color: #605ca8;
+       background: #fff;
+       font-weight: 700;
+       margin-bottom: 10px;
+    }
+
+    .btn-search:hover
+    {
+      background: #605ca8;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    .btn-back
+    {
+      position: relative;
+      top: 20px;
+       border: 2px solid #fff;
+       border-radius: 5px;
+       padding: 10px;
+       color: #fff;
+       background: #605ca8;
+       font-weight: 700;
+       text-decoration: none;
+    }
+
+    .btn-back:hover
+    {
+      background: #fff;
+      color: #605ca8;
+      border: 2px solid #605ca8;
+    }
+
+    .content-cus
+    {
+      position: relative;
+      top: 50px;
+    }
+
+  
+
+ </style>
+
   <body class="hold-transition skin-<?php echo $_SESSION['skin'];?> layout-top-nav">
     <div class="wrapper">
       <?php include('../dist/includes/header.php');
       include('../dist/includes/dbcon.php');
       ?>
-      <!-- Full Width Column -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background: #fff;">
         <div class="container">
-          <!-- Content Header (Page header) -->
           <section class="content-header">
             <h1>
-              <a class="btn btn-lg btn-warning" href="home.php">Back</a>
-              
+              <a class="btn-back" href="home.php">Back</a>
             </h1>
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -49,10 +162,10 @@ endif;
           </section>
 
           <!-- Main content -->
-          <section class="content">
+          <section class="content content-cus">
             <div class="row">
              <div class="col-md-8">
-              <div class="box box-primary">
+              <div class="box">
                 <div class="box-header with-border">
                   <h3 class="box-title">Add New Customer</h3>
                 </div>
@@ -61,22 +174,23 @@ endif;
                   <form method="post" action="customer_add.php" enctype="multipart/form-data" class="form-horizontal">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="date" class="col-sm-3 control-label">Last Name</label>
+                        <label for="date" class="control-label">Last Name</label>
                         <div class="input-group col-sm-8">
-                          <input type="text" class="form-control pull-right" id="date" name="last" placeholder="Customer Last Name" required>
-                        </div><!-- /.input group -->
-                      </div><!-- /.form group -->
+                          <input type="text" class="form-control txt-input" id="date" name="last" placeholder="Customer Last Name" required>
+                        </div>
+                      </div>
                     </div>
                     
                     <div class="col-md-6">  
                       <div class="form-group">
-                        <label for="date" class="col-sm-3 control-label">First Name</label>
+                        <label for="date" class="control-label">First Name</label> 
                         <div class="input-group col-md-8">
-                          <input type="text" class="form-control pull-right" id="date" name="first" placeholder="Customer First Name" required>
+                          <input type="text" class="form-control txt-input" id="date" name="first" placeholder="Customer First Name" required>
                         </div><!-- /.input group -->
                       </div><!-- /.form group -->
                     </div>
 
+                    <!--
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="date" class="col-sm-3 control-label">Contact #</label>
@@ -90,60 +204,60 @@ endif;
                       <div class="form-group">
                         <label for="date" class="col-sm-3 control-label">Address</label>   
                         <div class="input-group col-md-8">
-                          <textarea class="form-control pull-right" id="date" name="address" placeholder="Complete Address" required></textarea>
+                          <textarea class="form-control pull-right" id="date" name="address" placeholder="Complete Address"></textarea>
                         </div>
                       </div>
-                    </div>     
+                    </div>   -->  
 
                     
           
-                    <div class="col-md-12">
                        <div class="col-md-12">
-                        <button class="btn btn-lg btn-primary pull-right" id="daterange-btn" name="">Next</button>
-          </div>  
+                       <div class="col-md-12">
+                        <button class="btn-name" id="daterange-btn" name="">Next</button>
+                     </div>  
                     </div>  
-          
-          </form> 
-
-                
-        
+                  </form> 
                 </div><!-- /.box-body -->
               </div><!-- /.box -->
             </div>
             <div class="col-md-4">
-              <div class="box box-primary">
+              <div class="box">
                 <div class="box-header with-border">
                   <h3 class="box-title">Search Existing Customer</h3>
                 </div>
                 <div class="box-body">
                 
                 <form method="post" action="cash_transaction.php" enctype="multipart/form-data">
-  
                   <div class="form-group">
-                    <label for="date">Search Customer Name</label>
+                    <label for="date" class="c-name">Search Customer Name</label>
                     <div class="input-group col-md-12">
-                      <select class="form-control select2" style="width: 100%;" name="cid" required>
+                      
+                      <select class="form-control select2" style="width: 70%;" name="cid" required>
+                      
                       <?php
                        include('../dist/includes/dbcon.php');
                         $query2=mysqli_query($con,"select * from customer where branch_id='$branch' order by cust_last, cust_first")or die(mysqli_error());
                           while($row2=mysqli_fetch_array($query2)){
                       ?>
-            <option value="<?php echo $row2['cust_id'];?>"><?php echo $row2['cust_last'].", ".$row2['cust_first'];?></option>
-          <?php }?>
+
+                     <option value="<?php echo $row2['cust_id'];?>"><?php echo $row2['cust_last'].", ".$row2['cust_first'];?>
+                     </option>
+                     
+                     <?php } ?>
+
                     </select>
-                    </div><!-- /.input group -->
-                  </div><!-- /.form group -->
+                    </div>
+                  </div>
       
                   
                   <div class="form-group">
                     <div class="input-group col-md-12">
-                      <button class="btn btn-lg btn-primary pull-right" id="daterange-btn" name="">
-                        Search
+                      <button class="btn-search" id="daterange-btn" name="">
+                        Next
                       </button>
-           
                     </div>
-                  </div><!-- /.form group -->
-        </form> 
+                  </div>
+                 </form> 
         
                 </div><!-- /.box-body -->
               </div><!-- /.box -->

@@ -1,7 +1,7 @@
 <?php
 
 
-	$con = mysqli_connect('localhost', 'root', '', 'inventory');
+	include('../dist/includes/dbcon.php');
 
 	if(!$con)
 	{
